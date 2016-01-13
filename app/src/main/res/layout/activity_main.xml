@@ -1,0 +1,31 @@
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/showAlphabet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alphabet"
+        android:layout_row="0"
+        android:layout_column="0" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wordExercises"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:onClick="openWordExercises"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exercises"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:onClick="openExercises"/>
+
+</GridLayout>
