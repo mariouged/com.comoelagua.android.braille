@@ -36,8 +36,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, WordExercisesActivity.class));
     }
 
-    public void openExercises(View view) {
-        Intent intent = new Intent(this, ExercisesActivity.class);
-        startActivity(intent);
+    public void openPhraseExercises(View view) {
+        startActivity(new Intent(this, PhraseExercisesActivity.class));
     }
 }

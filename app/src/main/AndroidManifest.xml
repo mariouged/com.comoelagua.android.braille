@@ -3,9 +3,9 @@
     package="com.comoelagua.android.braille">
 
     <application
+        android:name=".BrailleApplication"
         android:allowBackup="true"
         android:debuggable="true"
-        android:name="com.comoelagua.android.braille.BrailleApplication"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
@@ -37,6 +37,14 @@
         <activity
             android:name=".WordExercisesActivity"
             android:label="@string/title_activity_word_exercises"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.comoelagua.android.braille.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PhraseExercisesActivity"
+            android:label="@string/title_activity_phrase_exercises"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

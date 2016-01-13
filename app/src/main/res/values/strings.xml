@@ -18,5 +18,7 @@
     <string name="word_label">Palabra</string>
     <string name="check">Comprobar</string>
     <string name="result">Resultados</string>
+    <string name="phraseExercises">Ejercicios de frases</string>
+    <string name="title_activity_phrase_exercises">Ejercicios de frases</string>
 
 </resources>

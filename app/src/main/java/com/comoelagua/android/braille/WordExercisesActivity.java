@@ -19,19 +19,19 @@ import java.util.List;
 
 public class WordExercisesActivity extends AppCompatActivity {
 
-    private TextView wordLabel;
-    private TextView askNumberTextView;
-    private TextView askTextView;
-    private EditText answerEditText;
-    private Button nextButton;
+    protected TextView wordLabel;
+    protected TextView askNumberTextView;
+    protected TextView askTextView;
+    protected EditText answerEditText;
+    protected Button nextButton;
 
-    private ArrayList<Word> wordsList;
-    private Word currentWord;
-    private int askNumber = 0;
-    private int maxSize = 10;
-    private int ok = 0;
-    private int fail = 0;
-    private boolean hasError = false;
+    protected ArrayList<Word> wordsList;
+    protected Word currentWord;
+    protected int askNumber = 0;
+    protected int maxSize = 10;
+    protected int ok = 0;
+    protected int fail = 0;
+    protected boolean hasError = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +47,15 @@ public class WordExercisesActivity extends AppCompatActivity {
         Typeface typeFace = Typeface.createFromAsset(getAssets(), "fonts/Braille6-ANSI.ttf");
         askTextView.setTypeface(typeFace);
 
+        // TODO Word and WordDao implements interface common with Phrase and PhraseDao respectivamente
+        loadWordsList();
+
+        showAsk(wordsList.get(askNumber));
+    }
+
+    protected void loadWordsList() {
         WordsDao wordsDao = ((BrailleApplication) getApplicationContext()).getWordsDao();
         wordsList = wordsDao.readRandom( maxSize );
-        showAsk(wordsList.get(askNumber));
     }
 
     protected void showAsk(Word word) {
@@ -95,7 +101,7 @@ public class WordExercisesActivity extends AppCompatActivity {
         nextButton.setVisibility(View.INVISIBLE);
     }
 
-    private void answerFail(View view) {
+    protected void answerFail(View view) {
         List<Integer> errorsList = currentWord.getErrorsList();
         Spannable answerSpannable = (Spannable) answerEditText.getText();
         for(Integer positionError : errorsList) {
