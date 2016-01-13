@@ -45,7 +45,7 @@ public class AlphabetAdapter extends BaseAdapter {
         TextView brailleTextView = (TextView) rowView.findViewById(R.id.brailleTextView);
         brailleTextView.setText( characters[position] + "" );
 
-        Typeface typeFace = Typeface.createFromAsset(context.getAssets(), "fonts/BrailleAOE.ttf");
+        Typeface typeFace = Typeface.createFromAsset(context.getAssets(), "fonts/Braille6-ANSI.ttf");
         brailleTextView.setTypeface(typeFace);
 
         return rowView;

@@ -1,13 +1,17 @@
 package com.comoelagua.android.braille.model.beans;
 
+import android.support.annotation.NonNull;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class Word {
 
     protected int id;
-
     protected String word;
-
     protected List<Integer> errorsList;
 
     public Word(int id, String word) {
@@ -36,6 +40,7 @@ public class Word {
             return true;
         }
 
+        errorsList = new ArrayList<>();
         for(int i = 0; i < answer.length(); i++) {
             if (answer.charAt(i) != word.charAt(i)) {
                 errorsList.add(new Integer(i));
@@ -43,5 +48,9 @@ public class Word {
         }
 
         return false;
+    }
+
+    public List<Integer> getErrorsList() {
+        return errorsList;
     }
 }
