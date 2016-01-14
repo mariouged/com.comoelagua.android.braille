@@ -40,10 +40,10 @@ public class AlphabetAdapter extends BaseAdapter {
         View rowView = inflater.inflate(R.layout.alphabet_row, parent, false);
 
         TextView characterTextView = (TextView) rowView.findViewById(R.id.characterTextView);
-        characterTextView.setText( characters[position] + "" );
+        characterTextView.setText( characters[position]);
 
         TextView brailleTextView = (TextView) rowView.findViewById(R.id.brailleTextView);
-        brailleTextView.setText( characters[position] + "" );
+        brailleTextView.setText( brailleCharacters[position]);
 
         Typeface typeFace = Typeface.createFromAsset(context.getAssets(), "fonts/Braille6-ANSI.ttf");
         brailleTextView.setTypeface(typeFace);
@@ -51,11 +51,21 @@ public class AlphabetAdapter extends BaseAdapter {
         return rowView;
     }
 
-    private final char[] characters = {
-            'a', 'á', 'b', 'c', 'd', 'e', 'é', 'f', 'g', 'h', 'i', 'í', 'j',
-            'k', 'l', 'm', 'n', 'ñ', 'o', 'ó', 'p', 'q', 'r', 's', 't',
-            'u', 'ú', 'ü', 'w', 'x', 'y', 'z',
-            '1', '2', '3', '4', '5', '6', '7', '8', '9', '0',
-            ',', ';', ':', '.', '-', '(', ')', '"', '"', '¿', '?', '¡', '!'
+    private final String[] characters = {
+            "a", "á", "b", "c", "d", "e", "é", "f", "g", "h", "i", "í", "j",
+            "k", "l", "m", "n", "ñ", "o", "ó", "p", "q", "r", "s", "t",
+            "u", "ú", "ü", "w", "x", "y", "z",
+            "may.", "núm.",
+            "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
+            ",", ";", ":", ".", "-", "(", ")", "\"", "\"", "¿", "?", "¡", "!"
+    };
+
+    private final String[] brailleCharacters = {
+            "a", "á", "b", "c", "d", "e", "é", "f", "g", "h", "i", "í", "j",
+            "k", "l", "m", "n", "ñ", "o", "ó", "p", "q", "r", "s", "t",
+            "u", "ú", "ü", "w", "x", "y", "z",
+            "´", "#",
+            "#a", "#b", "#c", "#d", "#e", "#f", "#g", "#h", "#i", "#j",
+            ",", ";", ":", ".", "-", "(", ")", "\"", "\"", "¿", "?", "¡", "!"
     };
 }

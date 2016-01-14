@@ -1,11 +1,14 @@
 package com.comoelagua.android.braille;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
 import android.text.style.ForegroundColorSpan;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -51,6 +54,22 @@ public class WordExercisesActivity extends AppCompatActivity {
         loadWordsList();
 
         showAsk(wordsList.get(askNumber));
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_word_exercises, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.actionAlphabet) {
+            startActivity(new Intent(this, AlphabetActivity.class));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     protected void loadWordsList() {

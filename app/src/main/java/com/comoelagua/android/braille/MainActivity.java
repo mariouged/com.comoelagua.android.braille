@@ -32,6 +32,19 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.actionHelp) {
+            startActivity(new Intent(this, CharactersActivity.class));
+            return true;
+        }
+        if (item.getItemId() == R.id.actionAlphabet) {
+            startActivity(new Intent(this, AlphabetActivity.class));
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
     public  void openWordExercises(View view) {
         startActivity(new Intent(this, WordExercisesActivity.class));
     }
