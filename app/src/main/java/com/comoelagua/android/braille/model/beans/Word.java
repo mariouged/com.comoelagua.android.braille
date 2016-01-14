@@ -11,7 +11,7 @@ public class Word {
 
     public Word(int id, String word) {
         this.id = id;
-        this.word = word;
+        setWord(word);
     }
 
     public int getId() {
@@ -27,17 +27,18 @@ public class Word {
     }
 
     public void setWord(String word) {
-        this.word = word;
+        this.word = word.toLowerCase();
     }
 
     public boolean checkEquals(String answer) {
-        if (this.word.equals(answer)) {
+        String answerLower = answer.toLowerCase();
+        if (word.equals(answerLower)) {
             return true;
         }
 
         errorsList = new ArrayList<>();
-        for(int i = 0; i < answer.length(); i++) {
-            if (answer.charAt(i) != word.charAt(i)) {
+        for(int i = 0; i < answerLower.length(); i++) {
+            if (answerLower.charAt(i) != word.charAt(i)) {
                 errorsList.add(new Integer(i));
             }
         }

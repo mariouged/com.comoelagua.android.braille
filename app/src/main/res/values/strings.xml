@@ -20,8 +20,19 @@
     <string name="result">Resultados</string>
     <string name="phraseExercises">Ejercicios de frases</string>
     <string name="title_activity_phrase_exercises">Ejercicios de frases</string>
-    <string name="title_activity_characters">CharactersActivity</string>
+    <string name="title_activity_characters">Test caracteres ascii</string>
     <string name="actionHelp">Ayuda</string>
     <string name="actionAlphabet">Alfabeto</string>
+    <string name="mainParagraph">Aprende Braille, primero repasa el alfabeto y luego haz ejercicios de palabras, cuando tengas cero fallos, pasa a los ejercicios de frases.
+        \nVersion 0.9
+        \nLamentandolo mucho sólo sirve para que aprendan videntes: profesores, amigos, familiares.
+        \nPor el momento:
+        \n - No se utilizan mayúsculas.
+        \n - Solo en Español
+    </string>
+    <string name="title_activity_results_exercises">Resultados del ejercicio</string>
+    <string name="okLabel">Correctas</string>
+    <string name="failLabel">Falladas</string>
+    <string name="review">Repasar los siguientes caracteres</string>
 
 </resources>

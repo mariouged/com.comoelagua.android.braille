@@ -36,6 +36,9 @@ public class WordExercisesActivity extends AppCompatActivity {
     protected int fail = 0;
     protected boolean hasError = false;
 
+    public static String OK_VALUE = "com.comoelagua.android.braille.WordExercisesActivity.OK_VALUE";
+    public static String FAIL_VALUE = "com.comoelagua.android.braille.WordExercisesActivity.FAIL_VALUE";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,11 +116,10 @@ public class WordExercisesActivity extends AppCompatActivity {
     }
 
     public void showResult() {
-        wordLabel.setText(R.string.result);
-        askNumberTextView.setText(" ok " + ok + " : fail " + fail);
-        askTextView.setVisibility(View.INVISIBLE);
-        answerEditText.setVisibility(View.INVISIBLE);
-        nextButton.setVisibility(View.INVISIBLE);
+        Intent intent = new Intent(this, ResultsExercisesActivity.class);
+        intent.putExtra(OK_VALUE, "" + ok);
+        intent.putExtra(FAIL_VALUE, "" + fail);
+        startActivity(intent);
     }
 
     protected void answerFail(View view) {
