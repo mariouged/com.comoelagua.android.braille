@@ -29,5 +29,12 @@ public class ResultsExercisesActivity extends AppCompatActivity {
         okValueTextView.setText("" + resultExercise.getOkCount());
         TextView failValueTextView = (TextView) findViewById(R.id.failValue);
         failValueTextView.setText("" + resultExercise.getFailCount());
+
+        TextView charactersErrorsList = (TextView) findViewById(R.id.charactersErrorsList);
+        String joinCharStrError = "";
+        for(String charStrError : resultExercise.getCharactersErrorsList()) {
+            joinCharStrError += charStrError + "\n";
+        }
+        charactersErrorsList.setText(joinCharStrError);
     }
 }

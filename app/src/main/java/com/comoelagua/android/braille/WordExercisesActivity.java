@@ -36,6 +36,7 @@ public class WordExercisesActivity extends AppCompatActivity {
     protected int ok = 0;
     protected int fail = 0;
     protected boolean hasError = false;
+    protected ResultExercise resultExercise;
 
     public final static String RESULT_EXERCISE = "com.comoelagua.android.braille.WordExercisesActivity.RESULT_EXERCISE";
 
@@ -52,6 +53,8 @@ public class WordExercisesActivity extends AppCompatActivity {
 
         Typeface typeFace = Typeface.createFromAsset(getAssets(), "fonts/Braille6-ANSI.ttf");
         askTextView.setTypeface(typeFace);
+
+        resultExercise = new ResultExercise();
 
         setWordType();
 
@@ -81,6 +84,8 @@ public class WordExercisesActivity extends AppCompatActivity {
         wordType = intent.getStringExtra(MainActivity.WORD_TYPE);
         if ("phrase".equals(wordType)) {
             setTitle(R.string.title_activity_phrase_exercises);
+        } else if ("debug".equals(wordType)) {
+            maxSize = 2;
         }
     }
 
@@ -130,7 +135,9 @@ public class WordExercisesActivity extends AppCompatActivity {
 
     public void showResult() {
         Intent intent = new Intent(this, ResultsExercisesActivity.class);
-        intent.putExtra(RESULT_EXERCISE, new ResultExercise(ok, fail));
+        resultExercise.setOkCount(ok);
+        resultExercise.setFailCount(fail);
+        intent.putExtra(RESULT_EXERCISE, resultExercise);
         startActivity(intent);
     }
 
@@ -140,5 +147,7 @@ public class WordExercisesActivity extends AppCompatActivity {
         for(Integer positionError : errorsList) {
             answerSpannable.setSpan( new ForegroundColorSpan(Color.RED), positionError.intValue(), 1 + positionError.intValue(), Spannable.SPAN_COMPOSING);
         }
+        resultExercise.addAllcharactersErrorsList(currentWord.getCharactersErrorsList());
+
     }
 }

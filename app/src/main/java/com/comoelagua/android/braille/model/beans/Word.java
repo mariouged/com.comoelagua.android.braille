@@ -8,6 +8,7 @@ public class Word {
     protected int id;
     protected String word;
     protected List<Integer> errorsList;
+    protected List<String> charactersErrorsList;
 
     public Word(int id, String word) {
         this.id = id;
@@ -37,9 +38,11 @@ public class Word {
         }
 
         errorsList = new ArrayList<>();
+        charactersErrorsList = new ArrayList<>();
         for(int i = 0; i < answerLower.length(); i++) {
             if (answerLower.charAt(i) != word.charAt(i)) {
                 errorsList.add(new Integer(i));
+                charactersErrorsList.add(word.substring(i, 1 + i));
             }
         }
 
@@ -48,5 +51,9 @@ public class Word {
 
     public List<Integer> getErrorsList() {
         return errorsList;
+    }
+
+    public List<String> getCharactersErrorsList() {
+        return charactersErrorsList;
     }
 }

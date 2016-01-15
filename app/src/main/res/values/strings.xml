@@ -34,5 +34,6 @@
     <string name="okLabel">Correctas</string>
     <string name="failLabel">Falladas</string>
     <string name="review">Repasar los siguientes caracteres</string>
+    <string name="testFont">test font</string>
 
 </resources>
