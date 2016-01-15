@@ -28,7 +28,7 @@ public class WordExercisesActivity extends AppCompatActivity {
     protected TextView askTextView;
     protected EditText answerEditText;
     protected Button nextButton;
-
+    protected String wordType;
     protected ArrayList<Word> wordsList;
     protected Word currentWord;
     protected int askNumber = 0;
@@ -53,7 +53,8 @@ public class WordExercisesActivity extends AppCompatActivity {
         Typeface typeFace = Typeface.createFromAsset(getAssets(), "fonts/Braille6-ANSI.ttf");
         askTextView.setTypeface(typeFace);
 
-        // TODO Word and WordDao implements interface common with Phrase and PhraseDao respectivamente
+        setWordType();
+
         loadWordsList();
 
         showAsk(wordsList.get(askNumber));
@@ -75,9 +76,21 @@ public class WordExercisesActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    protected void setWordType() {
+        Intent intent = getIntent();
+        wordType = intent.getStringExtra(MainActivity.WORD_TYPE);
+        if ("phrase".equals(wordType)) {
+            setTitle(R.string.title_activity_phrase_exercises);
+        }
+    }
+
     protected void loadWordsList() {
         WordsDao wordsDao = ((BrailleApplication) getApplicationContext()).getWordsDao();
-        wordsList = wordsDao.readRandom( maxSize );
+        if ("phrase".equals(wordType)) {
+            wordsList = wordsDao.readPhrasesRandom( maxSize );
+        } else {
+            wordsList = wordsDao.readRandom(maxSize);
+        }
     }
 
     protected void showAsk(Word word) {

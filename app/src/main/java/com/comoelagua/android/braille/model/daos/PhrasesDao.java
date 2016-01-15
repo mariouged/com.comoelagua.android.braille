@@ -1,7 +1,5 @@
 package com.comoelagua.android.braille.model.daos;
 
-import com.comoelagua.android.braille.model.beans.Phrase;
-
 import java.util.ArrayList;
 
 public class PhrasesDao extends WordsDao implements CrudDao {

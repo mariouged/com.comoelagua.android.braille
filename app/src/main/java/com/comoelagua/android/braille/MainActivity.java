@@ -11,6 +11,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    public final static String WORD_TYPE = "com.comoelagua.android.braille.WORD_TYPE";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,10 +48,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public  void openWordExercises(View view) {
-        startActivity(new Intent(this, WordExercisesActivity.class));
+        Intent intent = new Intent(this, WordExercisesActivity.class);
+        intent.putExtra(WORD_TYPE, "word");
+        startActivity(intent);
     }
 
     public void openPhraseExercises(View view) {
-        startActivity(new Intent(this, PhraseExercisesActivity.class));
+        Intent intent = new Intent(this, WordExercisesActivity.class);
+        intent.putExtra(WORD_TYPE, "phrase");
+        startActivity(intent);
     }
 }
