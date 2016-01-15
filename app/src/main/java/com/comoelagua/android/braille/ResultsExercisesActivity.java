@@ -9,26 +9,25 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
+import com.comoelagua.android.braille.model.beans.ResultExercise;
+
 public class ResultsExercisesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results_exercises);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         setResults();
     }
 
     protected void setResults() {
         Intent intent = getIntent();
-        String okValue = intent.getStringExtra(WordExercisesActivity.OK_VALUE);
-        String failValue = intent.getStringExtra(WordExercisesActivity.FAIL_VALUE);
+        ResultExercise resultExercise = (ResultExercise) intent.getSerializableExtra(WordExercisesActivity.RESULT_EXERCISE);
 
         TextView okValueTextView = (TextView) findViewById(R.id.okValue);
-        okValueTextView.setText(okValue);
+        okValueTextView.setText("" + resultExercise.getOkCount());
         TextView failValueTextView = (TextView) findViewById(R.id.failValue);
-        failValueTextView.setText(failValue);
+        failValueTextView.setText("" + resultExercise.getFailCount());
     }
 }

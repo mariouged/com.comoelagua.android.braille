@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.comoelagua.android.braille.model.beans.ResultExercise;
 import com.comoelagua.android.braille.model.beans.Word;
 import com.comoelagua.android.braille.model.daos.WordsDao;
 
@@ -36,8 +37,7 @@ public class WordExercisesActivity extends AppCompatActivity {
     protected int fail = 0;
     protected boolean hasError = false;
 
-    public static String OK_VALUE = "com.comoelagua.android.braille.WordExercisesActivity.OK_VALUE";
-    public static String FAIL_VALUE = "com.comoelagua.android.braille.WordExercisesActivity.FAIL_VALUE";
+    public final static String RESULT_EXERCISE = "com.comoelagua.android.braille.WordExercisesActivity.RESULT_EXERCISE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,8 +117,7 @@ public class WordExercisesActivity extends AppCompatActivity {
 
     public void showResult() {
         Intent intent = new Intent(this, ResultsExercisesActivity.class);
-        intent.putExtra(OK_VALUE, "" + ok);
-        intent.putExtra(FAIL_VALUE, "" + fail);
+        intent.putExtra(RESULT_EXERCISE, new ResultExercise(ok, fail));
         startActivity(intent);
     }
 
