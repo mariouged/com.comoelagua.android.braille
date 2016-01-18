@@ -40,4 +40,7 @@
     <string name="sdk_dialog_title">API version</string>
     <string name="phrase">frase</string>
 
+    <string name="timeLabel">Tiempo</string>
+    <string name="bestTimeLabel">Mejor</string>
+
 </resources>

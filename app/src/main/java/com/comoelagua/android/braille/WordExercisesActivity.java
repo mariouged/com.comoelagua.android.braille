@@ -136,8 +136,7 @@ public class WordExercisesActivity extends AppCompatActivity {
 
     public void showResult() {
         Intent intent = new Intent(this, ResultsExercisesActivity.class);
-        resultExercise.setOkCount(ok);
-        resultExercise.setFailCount(fail);
+        resultExercise.finish(ok, fail);
         intent.putExtra(RESULT_EXERCISE, resultExercise);
         startActivity(intent);
     }

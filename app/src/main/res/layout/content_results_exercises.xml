@@ -4,10 +4,11 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <LinearLayout
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:rowCount="3"
+        android:columnCount="4">
 
         <TextView
             android:layout_width="wrap_content"
@@ -15,7 +16,9 @@
             android:textColor="#000000"
             android:text="@string/okLabel"
             android:textSize="18dp"
-            android:layout_marginRight="20dp" />
+            android:layout_margin="5dp"
+            android:layout_row="0"
+            android:layout_column="0"/>
 
         <TextView android:id="@+id/okValue"
             android:layout_height="wrap_content"
@@ -23,23 +26,20 @@
             android:text="@string/okLabel"
             android:textColor="#ffffff"
             android:textSize="18dp"
+            android:layout_margin="5dp"
             android:background="#1bf429"
-            android:paddingRight="30dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            android:layout_row="0"
+            android:layout_column="1" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
             android:textSize="18dp"
+            android:layout_margin="5dp"
             android:text="@string/failLabel"
-            android:layout_marginRight="30dp" />
+            android:layout_row="0"
+            android:layout_column="2" />
 
         <TextView android:id="@+id/failValue"
             android:layout_width="wrap_content"
@@ -47,11 +47,51 @@
             android:text="@string/failLabel"
             android:textColor="#ffffff"
             android:textSize="18dp"
-            android:paddingRight="30dp"
-            android:background="#ee1616" />
+            android:layout_margin="5dp"
+            android:background="#ee1616"
+            android:layout_row="0"
+            android:layout_column="3" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="@string/timeLabel"
+            android:textSize="18dp"
+            android:layout_margin="5dp"
+            android:layout_row="1"
+            android:layout_column="0"/>
 
-    </LinearLayout>
+        <TextView android:id="@+id/timeValue"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="@string/timeLabel"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_margin="5dp"
+            android:layout_row="1"
+            android:layout_column="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_margin="5dp"
+            android:text="@string/bestTimeLabel"
+            android:layout_row="1"
+            android:layout_column="2" />
+
+        <TextView android:id="@+id/bestTimeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bestTimeLabel"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_margin="5dp"
+            android:layout_row="1"
+            android:layout_column="3" />
+    </GridLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
