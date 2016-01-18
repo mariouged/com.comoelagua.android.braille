@@ -84,6 +84,7 @@ public class WordExercisesActivity extends AppCompatActivity {
         wordType = intent.getStringExtra(MainActivity.WORD_TYPE);
         if ("phrase".equals(wordType)) {
             setTitle(R.string.title_activity_phrase_exercises);
+            wordLabel.setText(R.string.phrase);
         } else if ("debug".equals(wordType)) {
             maxSize = 2;
         }

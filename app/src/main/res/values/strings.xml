@@ -36,4 +36,8 @@
     <string name="review">Repasar los siguientes caracteres</string>
     <string name="testFont">test font</string>
 
+    <string name="sdk_dialog_message">Versión de android no soportada</string>
+    <string name="sdk_dialog_title">API version</string>
+    <string name="phrase">frase</string>
+
 </resources>

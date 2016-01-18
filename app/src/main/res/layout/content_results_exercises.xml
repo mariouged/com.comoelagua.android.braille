@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_marginTop="40dp" >
+    android:orientation="vertical" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,7 +31,6 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
         android:orientation="horizontal">
 
         <TextView
@@ -52,24 +50,30 @@
             android:paddingRight="30dp"
             android:background="#ee1616" />
 
-        <ScrollView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:id="@+id/charactersErrorsList"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:ellipsize="marquee"
-                android:focusable="false"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:maxLines="10"
-                android:scrollbars="vertical"
-                android:text="@string/review" />
-        </ScrollView>
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:text="@string/review" />
+
+        <ListView
+            android:id="@+id/charactersErrorsList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:scrollbars="vertical"
+            android:layout_gravity="fill_vertical"
+            android:layout_alignParentTop="true" />
+
+    </LinearLayout>
 
 </LinearLayout>

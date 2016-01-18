@@ -9,25 +9,38 @@
         android:id="@+id/showAlphabet"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/alphabet" />
+        android:text="@string/alphabet"
+        
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/wordExercises"
         android:onClick="openWordExercises"
-        android:background="#d1ae15" />
+        android:background="#d1ae15"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/phraseExercises"
-        android:onClick="openPhraseExercises"/>
+        android:onClick="openPhraseExercises"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:text="@string/mainParagraph"
+        android:scrollbars="vertical"
         android:textSize="18dp"
         android:textColor="#000000"
         android:textIsSelectable="true"

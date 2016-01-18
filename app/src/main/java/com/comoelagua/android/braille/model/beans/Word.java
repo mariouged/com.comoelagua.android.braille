@@ -40,9 +40,12 @@ public class Word {
         errorsList = new ArrayList<>();
         charactersErrorsList = new ArrayList<>();
         for(int i = 0; i < answerLower.length(); i++) {
-            if (answerLower.charAt(i) != word.charAt(i)) {
+            if (i < word.length() && answerLower.charAt(i) != word.charAt(i)) {
                 errorsList.add(new Integer(i));
                 charactersErrorsList.add(word.substring(i, 1 + i));
+            } else if(i >= word.length()) {
+                errorsList.add(new Integer(i));
+                charactersErrorsList.add(answerLower.substring(i, 1 + i));
             }
         }
 
