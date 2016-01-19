@@ -19,8 +19,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        if (!checkSdk()) return;
-
         Button showAlphabet = (Button) findViewById(R.id.showAlphabet);
         showAlphabet.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, AlphabetActivity.class));
             }
         });
+
+        if (!checkSdk()) return;
     }
 
     @Override
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean checkSdk() {
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage(R.string.sdk_dialog_message)
                     .setTitle(R.string.sdk_dialog_title);
