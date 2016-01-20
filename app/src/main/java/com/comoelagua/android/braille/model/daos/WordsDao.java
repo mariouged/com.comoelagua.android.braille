@@ -129,7 +129,7 @@ public class WordsDao implements CrudDao {
         wordsList.add( new Word(72, "ese") );
         wordsList.add( new Word(73, "ahora") );
         wordsList.add( new Word(74, "cada") );
-        wordsList.add( new Word(75, "e") );
+        wordsList.add( new Word(75, "elefante") );
         wordsList.add( new Word(76, "vida") );
         wordsList.add( new Word(77, "otro") );
         wordsList.add( new Word(78, "después") );
@@ -418,7 +418,7 @@ public class WordsDao implements CrudDao {
         wordsList.add( new Word(361, "creo") );
         wordsList.add( new Word(362, "tengo") );
         wordsList.add( new Word(363, "dios") );
-        wordsList.add( new Word(364, "c") );
+        wordsList.add( new Word(364, "") );
         wordsList.add( new Word(365, "española") );
         wordsList.add( new Word(366, "condiciones") );
         wordsList.add( new Word(367, "méxico") );
@@ -616,8 +616,6 @@ public class WordsDao implements CrudDao {
         phrasesList.add(new Word(99, "Bon apetit."));
         phrasesList.add(new Word(99, "Borracho"));
         phrasesList.add(new Word(99, "Borracho como una cuba"));
-        phrasesList.add(new Word(99, "By all means"));
-        phrasesList.add(new Word(99, "By the way"));
         phrasesList.add(new Word(99, "Cada maestrillo tiene su librillo"));
         phrasesList.add(new Word(99, "Cada mochuelo a su olivo"));
         phrasesList.add(new Word(99, "Caer en saco roto"));
@@ -627,9 +625,6 @@ public class WordsDao implements CrudDao {
         phrasesList.add(new Word(99, "Cargar con el mochuelo"));
         phrasesList.add(new Word(99, "Carpe Diem!"));
         phrasesList.add(new Word(99, "Cenceño"));
-        phrasesList.add(new Word(99, "Chat someone up"));
-        phrasesList.add(new Word(99, "Cheer up!"));
-        phrasesList.add(new Word(99, "Cheers!"));
         phrasesList.add(new Word(99, "Cierra la puerta"));
         phrasesList.add(new Word(99, "Cojonudo"));
         phrasesList.add(new Word(99, "Como agua de mayo"));
@@ -727,7 +722,6 @@ public class WordsDao implements CrudDao {
         phrasesList.add(new Word(99, "Estás de broma"));
         phrasesList.add(new Word(99, "Esto es Jauja"));
         phrasesList.add(new Word(99, "Faltar un tornillo"));
-        phrasesList.add(new Word(99, "Get the sack"));
         phrasesList.add(new Word(99, "Ha pasado un ángel"));
         phrasesList.add(new Word(99, "Haber pillado un buen pedal"));
         phrasesList.add(new Word(99, "Hablando del rey de Roma"));
@@ -747,12 +741,9 @@ public class WordsDao implements CrudDao {
         phrasesList.add(new Word(99, "Hacerse la boca agua"));
         phrasesList.add(new Word(99, "Hacía un frío de cojones"));
         phrasesList.add(new Word(99, "Hasta el rabo todo es toro"));
-        phrasesList.add(new Word(99, "Help yourself"));
         phrasesList.add(new Word(99, "Hondonadas de hostias"));
         phrasesList.add(new Word(99, "Hostia"));
-        phrasesList.add(new Word(99, "How come?"));
         phrasesList.add(new Word(99, "Hoy por ti mañana por mí"));
-        phrasesList.add(new Word(99, "Hurry up"));
         phrasesList.add(new Word(99, "Ir a toda hostia"));
         phrasesList.add(new Word(99, "Ir al grano"));
         phrasesList.add(new Word(99, "Ir bien cocido"));
@@ -766,12 +757,7 @@ public class WordsDao implements CrudDao {
         phrasesList.add(new Word(99, "Irse bebiendo hasta el agua de los floreros"));
         phrasesList.add(new Word(99, "Irse con la música a otra parte"));
         phrasesList.add(new Word(99, "Irse por los cerros de Úbeda"));
-        phrasesList.add(new Word(99, "It rings a bell"));
-        phrasesList.add(new Word(99, "It serves you right"));
-        phrasesList.add(new Word(99, "It’s up to you"));
         phrasesList.add(new Word(99, "Jesús! (cuando alguien estornuda)"));
-        phrasesList.add(new Word(99, "Keep the change"));
-        phrasesList.add(new Word(99, "Keep your hair on!"));
         phrasesList.add(new Word(99, "La avaricia rompe el saco"));
         phrasesList.add(new Word(99, "La cabra siempre tira al monte"));
         phrasesList.add(new Word(99, "La esperanza es lo último que se pierde"));
@@ -803,7 +789,6 @@ public class WordsDao implements CrudDao {
         phrasesList.add(new Word(99, "Lo mereces"));
         phrasesList.add(new Word(99, "Los huevos, ingrediente indispensable de muchas expresiones españolas"));
         phrasesList.add(new Word(99, "Magro"));
-        phrasesList.add(new Word(99, "Make yourself at home"));
         phrasesList.add(new Word(99, "Mal de muchos, consuelo de tontos"));
         phrasesList.add(new Word(99, "Mala hierba nunca muere"));
         phrasesList.add(new Word(99, "Manga por Hombro"));
@@ -879,7 +864,6 @@ public class WordsDao implements CrudDao {
         phrasesList.add(new Word(99, "Pingüe"));
         phrasesList.add(new Word(99, "Pintar la mona"));
         phrasesList.add(new Word(99, "Piropos"));
-        phrasesList.add(new Word(99, "Pissed as a newt"));
         phrasesList.add(new Word(99, "Poner cara de póquer"));
         phrasesList.add(new Word(99, "Poner los huevos sobre la mesa"));
         phrasesList.add(new Word(99, "Poner los puntos sobre las íes"));
@@ -890,7 +874,6 @@ public class WordsDao implements CrudDao {
         phrasesList.add(new Word(99, "Por si las moscas"));
         phrasesList.add(new Word(99, "Por supuesto"));
         phrasesList.add(new Word(99, "Porque hoy es hoy"));
-        phrasesList.add(new Word(99, "Pull the other one"));
         phrasesList.add(new Word(99, "Qué aproveche o Buen provecho"));
         phrasesList.add(new Word(99, "Qué cara!"));
         phrasesList.add(new Word(99, "Qué lío!"));
@@ -957,8 +940,6 @@ public class WordsDao implements CrudDao {
         phrasesList.add(new Word(99, "Sin comerlo ni beberlo"));
         phrasesList.add(new Word(99, "Sírvete"));
         phrasesList.add(new Word(99, "Sobre gustos no hay nada escrito"));
-        phrasesList.add(new Word(99, "Talk of the devil"));
-        phrasesList.add(new Word(99, "Ten bob"));
         phrasesList.add(new Word(99, "Ten cuidado!"));
         phrasesList.add(new Word(99, "Tener el mono"));
         phrasesList.add(new Word(99, "Tener enchufe"));
@@ -981,14 +962,11 @@ public class WordsDao implements CrudDao {
         phrasesList.add(new Word(99, "Tirar la toalla"));
         phrasesList.add(new Word(99, "Tirar los tejos"));
         phrasesList.add(new Word(99, "Tirarse los trastos a la cabeza"));
-        phrasesList.add(new Word(99, "To my mind"));
-        phrasesList.add(new Word(99, "To pay cash"));
         phrasesList.add(new Word(99, "Tocando madera"));
         phrasesList.add(new Word(99, "Tocarse los huevos"));
         phrasesList.add(new Word(99, "Tócate los huevos"));
         phrasesList.add(new Word(99, "Tomamos la penúltima"));
         phrasesList.add(new Word(99, "Tomar el pelo"));
-        phrasesList.add(new Word(99, "Touch wood"));
         phrasesList.add(new Word(99, "Tropezar dos veces con la misma piedra"));
         phrasesList.add(new Word(99, "Tú eliges"));
         phrasesList.add(new Word(99, "Un aguafiestas"));

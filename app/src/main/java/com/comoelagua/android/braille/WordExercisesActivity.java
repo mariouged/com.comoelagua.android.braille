@@ -95,7 +95,7 @@ public class WordExercisesActivity extends AppCompatActivity {
     }
 
     protected void setWordType() {
-        resultExercise.setWordType("word");
+        // default is word
         Intent intent = getIntent();
         wordType = intent.getStringExtra(MainActivity.WORD_TYPE);
         if ("phrase".equals(wordType)) {

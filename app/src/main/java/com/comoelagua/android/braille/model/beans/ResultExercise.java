@@ -17,6 +17,7 @@ public class ResultExercise implements Serializable {
     protected Date end;
 
     public ResultExercise() {
+        setWordType("word");
         this.okCount = 0;
         this.failCount = 0;
         charactersErrorsList = new ArrayList<>();
