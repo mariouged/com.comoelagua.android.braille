@@ -9,6 +9,7 @@ import java.util.List;
 
 public class ResultExercise implements Serializable {
 
+    protected String wordType;
     protected int okCount;
     protected int failCount;
     protected List<String> charactersErrorsList;
@@ -50,5 +51,13 @@ public class ResultExercise implements Serializable {
 
     public long getTime() {
         return end.getTime() - begin.getTime();
+    }
+
+    public String getWordType() {
+        return wordType;
+    }
+
+    public void setWordType(String wordType) {
+        this.wordType = wordType;
     }
 }

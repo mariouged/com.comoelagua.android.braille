@@ -27,20 +27,23 @@ import com.comoelagua.android.braille.model.beans.ResultExercise;
 
 public class ResultsExercisesActivity extends AppCompatActivity {
 
-    public final static String BEST_TIME_VALUE = "bestTimeValue";
+    public final static String WORD_BEST_TIME_VALUE = "wordBestTimeValue";
+    public final static String PHRASE_BEST_TIME_VALUE = "phraseBestTimeValue";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results_exercises);
 
-        setResults();
-    }
-
-    protected void setResults() {
         Intent intent = getIntent();
         ResultExercise resultExercise = (ResultExercise) intent.getSerializableExtra(WordExercisesActivity.RESULT_EXERCISE);
 
+        setResults(resultExercise);
+
+        setBestTime(resultExercise);
+    }
+
+    protected void setResults(ResultExercise resultExercise) {
         TextView okValueTextView = (TextView) findViewById(R.id.okValue);
         okValueTextView.setText("" + resultExercise.getOkCount());
         TextView failValueTextView = (TextView) findViewById(R.id.failValue);
@@ -50,12 +53,18 @@ public class ResultsExercisesActivity extends AppCompatActivity {
 
         ListView charactersErrorsList = (ListView) findViewById(R.id.charactersErrorsList);
         charactersErrorsList.setAdapter(new CharacterErrorAdapter(this, resultExercise.getCharactersErrorsList()));
+    }
 
-        SharedPreferences preferences = getSharedPreferences(BEST_TIME_VALUE, 0);
-        long bestTimeValue = preferences.getLong(BEST_TIME_VALUE, 9999999);
+    protected void setBestTime(ResultExercise resultExercise) {
+        String namePreference = WORD_BEST_TIME_VALUE;
+        if ("phrase".equals(resultExercise.getWordType())) {
+            namePreference = PHRASE_BEST_TIME_VALUE;
+        }
+        SharedPreferences preferences = getSharedPreferences(namePreference, 0);
+        long bestTimeValue = preferences.getLong(namePreference, 9999999);
         if (bestTimeValue > resultExercise.getTime()) {
             SharedPreferences.Editor editor = preferences.edit();
-            editor.putLong(BEST_TIME_VALUE, resultExercise.getTime());
+            editor.putLong(namePreference, resultExercise.getTime());
             editor.commit();
             bestTimeValue = resultExercise.getTime();
         }

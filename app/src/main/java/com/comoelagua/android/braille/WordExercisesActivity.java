@@ -95,9 +95,11 @@ public class WordExercisesActivity extends AppCompatActivity {
     }
 
     protected void setWordType() {
+        resultExercise.setWordType("word");
         Intent intent = getIntent();
         wordType = intent.getStringExtra(MainActivity.WORD_TYPE);
         if ("phrase".equals(wordType)) {
+            resultExercise.setWordType("phrase");
             setTitle(R.string.title_activity_phrase_exercises);
             wordLabel.setText(R.string.phrase);
         } else if ("debug".equals(wordType)) {
