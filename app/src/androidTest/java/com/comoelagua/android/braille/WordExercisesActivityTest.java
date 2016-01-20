@@ -66,6 +66,7 @@ public class WordExercisesActivityTest {
                         .check(matches(withText(" " + (2 + i))));
             }
         }
-        //onView(withId(R.id.okValue)).check(matches(withText("" + maxSize)));
+        // result activity show answer ok
+        onView(withId(R.id.okValue)).check(matches(withText("" + maxSize)));
     }
 }
