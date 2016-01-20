@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public boolean checkSdk() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage(R.string.sdk_dialog_message)
                     .setTitle(R.string.sdk_dialog_title);
