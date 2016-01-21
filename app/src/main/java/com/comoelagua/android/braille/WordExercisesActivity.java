@@ -24,6 +24,7 @@ public class WordExercisesActivity extends ExercisesActivity {
     @Override
     public void setWordType() {
         wordType =  "word";
+        wordLabel.setText(R.string.word_label);
         resultExercise.setWordType(wordType);
     }
 

@@ -38,7 +38,7 @@
 
     <string name="sdk_dialog_message">Versión de android no soportada</string>
     <string name="sdk_dialog_title">API version</string>
-    <string name="phrase">frase</string>
+    <string name="phrase">Frase</string>
 
     <string name="timeLabel">Tiempo</string>
     <string name="bestTimeLabel">Mejor</string>
