@@ -47,7 +47,7 @@ public class WordsDao implements CrudDao {
         ArrayList<Word> wordsList = readAll();
         ArrayList<Word> shortWordsList = new ArrayList<Word>();
         for(int i = 0; i < length; i++) {
-            int randomNum = 1 + (int) (Math.random() * wordsList.size());
+            int randomNum = (int) (Math.random() * wordsList.size() );
             shortWordsList.add( wordsList.get(randomNum) );
         }
         return shortWordsList;

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.comoelagua.android.braille">
 
-    <uses-sdk android:minSdkVersion="14"
+    <uses-sdk android:minSdkVersion="18"
         android:targetSdkVersion="23"></uses-sdk>
 
     <application
@@ -32,6 +32,14 @@
         <activity
             android:name=".WordExercisesActivity"
             android:label="@string/title_activity_word_exercises"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.comoelagua.android.braille.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PhraseExercisesActivity"
+            android:label="@string/title_activity_phrase_exercises"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

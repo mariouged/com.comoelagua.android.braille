@@ -57,32 +57,23 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.actionAlphabet) {
             startActivity(new Intent(this, AlphabetActivity.class));
             return true;
-        } else if (item.getItemId() == R.id.actionHelp) {
-            Intent intent = new Intent(this, WordExercisesActivity.class);
-            intent.putExtra(WORD_TYPE, "debug");
-            startActivity(intent);
-            return true;
-        } else if (item.getItemId() == R.id.testFont) {
+        }/* else if (item.getItemId() == R.id.testFont) {
             startActivity(new Intent(this, CharactersActivity.class));
             return true;
-        }
+        }*/
         return super.onOptionsItemSelected(item);
     }
 
     public  void openWordExercises(View view) {
-        Intent intent = new Intent(this, WordExercisesActivity.class);
-        intent.putExtra(WORD_TYPE, "word");
-        startActivity(intent);
+        startActivity(new Intent(this, WordExercisesActivity.class));
     }
 
     public void openPhraseExercises(View view) {
-        Intent intent = new Intent(this, WordExercisesActivity.class);
-        intent.putExtra(WORD_TYPE, "phrase");
-        startActivity(intent);
+        startActivity(new Intent(this, PhraseExercisesActivity.class));
     }
 
     public boolean checkSdk() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage(R.string.sdk_dialog_message)
                     .setTitle(R.string.sdk_dialog_title);

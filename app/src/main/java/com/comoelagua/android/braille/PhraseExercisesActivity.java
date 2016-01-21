@@ -15,22 +15,20 @@
  */
 package com.comoelagua.android.braille;
 
-import com.comoelagua.android.braille.model.daos.WordsDao;
 import com.comoelagua.android.braille.module.exercises.ExercisesActivity;
+import com.comoelagua.android.braille.model.daos.WordsDao;
 
-
-public class WordExercisesActivity extends ExercisesActivity {
+public class PhraseExercisesActivity extends ExercisesActivity {
 
     @Override
     public void setWordType() {
-        wordType =  "word";
+        wordType =  "phrase";
         resultExercise.setWordType(wordType);
     }
 
     @Override
     public void loadWordsList() {
         WordsDao wordsDao = ((BrailleApplication) getApplicationContext()).getWordsDao();
-        wordsList = wordsDao.readRandom(maxSize);
+        wordsList = wordsDao.readPhrasesRandom(maxSize);
     }
-
 }

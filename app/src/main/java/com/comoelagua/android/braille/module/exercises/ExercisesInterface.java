@@ -13,24 +13,25 @@
  *
  * Contact: <mario.ugedo@gmail.com>
  */
-package com.comoelagua.android.braille;
+package com.comoelagua.android.braille.module.exercises;
 
-import com.comoelagua.android.braille.model.daos.WordsDao;
-import com.comoelagua.android.braille.module.exercises.ExercisesActivity;
+import android.view.View;
 
+import com.comoelagua.android.braille.model.beans.Word;
 
-public class WordExercisesActivity extends ExercisesActivity {
+public interface ExercisesInterface {
 
-    @Override
-    public void setWordType() {
-        wordType =  "word";
-        resultExercise.setWordType(wordType);
-    }
+    void setWordType();
 
-    @Override
-    public void loadWordsList() {
-        WordsDao wordsDao = ((BrailleApplication) getApplicationContext()).getWordsDao();
-        wordsList = wordsDao.readRandom(maxSize);
-    }
+    void loadWordsList();
 
+    void showAsk(Word word);
+
+    void nextAsk(View view);
+
+    void continueAsk(View view);
+
+    void answerFail(View view);
+
+    void showResult();
 }

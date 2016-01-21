@@ -27,9 +27,6 @@ import com.comoelagua.android.braille.model.beans.ResultExercise;
 
 public class ResultsExercisesActivity extends AppCompatActivity {
 
-    public final static String WORD_BEST_TIME_VALUE = "wordBestTimeValue";
-    public final static String PHRASE_BEST_TIME_VALUE = "phraseBestTimeValue";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +36,6 @@ public class ResultsExercisesActivity extends AppCompatActivity {
         ResultExercise resultExercise = (ResultExercise) intent.getSerializableExtra(WordExercisesActivity.RESULT_EXERCISE);
 
         setResults(resultExercise);
-
-        setBestTime(resultExercise);
     }
 
     protected void setResults(ResultExercise resultExercise) {
@@ -50,25 +45,11 @@ public class ResultsExercisesActivity extends AppCompatActivity {
         failValueTextView.setText("" + resultExercise.getFailCount());
         TextView timeValueTextView = (TextView) findViewById(R.id.timeValue);
         timeValueTextView.setText("" + Math.round(resultExercise.getTime() / 1000));
-
+        TextView bestTimeValueTextView = (TextView) findViewById(R.id.bestTimeValue);
+        bestTimeValueTextView.setText("" + Math.round(resultExercise.getBestTimeValue() / 1000));
         ListView charactersErrorsList = (ListView) findViewById(R.id.charactersErrorsList);
         charactersErrorsList.setAdapter(new CharacterErrorAdapter(this, resultExercise.getCharactersErrorsList()));
     }
 
-    protected void setBestTime(ResultExercise resultExercise) {
-        String namePreference = WORD_BEST_TIME_VALUE;
-        if ("phrase".equals(resultExercise.getWordType())) {
-            namePreference = PHRASE_BEST_TIME_VALUE;
-        }
-        SharedPreferences preferences = getSharedPreferences(namePreference, 0);
-        long bestTimeValue = preferences.getLong(namePreference, 9999999);
-        if (bestTimeValue > resultExercise.getTime()) {
-            SharedPreferences.Editor editor = preferences.edit();
-            editor.putLong(namePreference, resultExercise.getTime());
-            editor.commit();
-            bestTimeValue = resultExercise.getTime();
-        }
-        TextView bestTimeValueTextView = (TextView) findViewById(R.id.bestTimeValue);
-        bestTimeValueTextView.setText("" + Math.round(bestTimeValue / 1000));
-    }
+
 }
