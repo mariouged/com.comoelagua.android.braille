@@ -34,7 +34,7 @@ public class AssetFileReaderTest extends InstrumentationTestCase {
 
     @Before
     public void setUp() {
-        context = getInstrumentation().getContext();
+        context = getInstrumentation().getTargetContext();
     }
 
     @Test
