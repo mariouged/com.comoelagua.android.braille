@@ -30,10 +30,10 @@ public class WordsDao implements CrudDao {
         boolean random = false;
         int length = 0;
         for(Criteria criteria : criteriaList) {
-            if (criteria.getParameter() == "random") {
+            if ("random".equals( criteria.getParameter() )) {
                 random = true;
             }
-            if (criteria.getParameter() == "length") {
+            if ("length".equals( criteria.getParameter() )) {
                 length = Integer.parseInt( criteria.getValue() );
             }
         }
