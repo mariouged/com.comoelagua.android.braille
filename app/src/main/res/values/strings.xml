@@ -23,24 +23,35 @@
     <string name="title_activity_characters">Test caracteres ascii</string>
     <string name="actionHelp">Ayuda</string>
     <string name="actionAlphabet">Alfabeto</string>
-    <string name="mainParagraph">Aprende Braille, primero repasa el alfabeto y luego haz ejercicios de palabras, cuando tengas cero fallos, pasa a los ejercicios de frases.
-        \nVersion 1.1
-        \nLamentandolo mucho sólo sirve para que aprendan videntes: profesores, amigos, familiares.
-        \nPor el momento:
-        \n - No se utilizan mayúsculas.
-        \n - Solo en Español
-    </string>
     <string name="title_activity_results_exercises">Resultados del ejercicio</string>
     <string name="okLabel">Correctas</string>
     <string name="failLabel">Falladas</string>
     <string name="review">Repasar los siguientes caracteres</string>
     <string name="testFont">test font</string>
-
     <string name="sdk_dialog_message">Versión de android no soportada</string>
     <string name="sdk_dialog_title">API version</string>
     <string name="phrase">Frase</string>
-
     <string name="timeLabel">Tiempo</string>
     <string name="bestTimeLabel">Mejor</string>
-
+    <string name="title_activity_help">Ayuda</string>
+    <string name="mainParagraph">
+        Aprende Braille, primero repasa el alfabeto y luego haz ejercicios de palabras, cuando tengas cero fallos, pasa a los ejercicios de frases.
+        \n
+        \nLamentandolo mucho sólo sirve para que aprendan videntes: profesores, amigos, familiares.
+        \nPor el momento:
+        \n- No se utilizan mayúsculas.
+        \n- Solo en Español
+        \n
+        \nLa aplicación de android, contiene el alfabeto braille en Español.
+        \nPermite realizar ejercicios de palabras, son test de preguntas, en las que se debe leer en braille e introducir cada palabra leída para corregir y mostrar los resultados.
+        \nLo mismo para los ejercicios de frases.
+        \nPor último muestra los resultados del ejercicio, correctas, falladas, tiempo y mejor tiempo.
+        \n
+        \nNo requiere ningún permiso, no se recogen ni envía ninguna información del usuario.
+        \n
+        \nPuedes usarla en cualquier momento para practicar y así aprender braille.
+        \nNo requiere conexión por lo que no te consumirá datos.
+        \n
+        \nVersion 1.1
+    </string>
 </resources>

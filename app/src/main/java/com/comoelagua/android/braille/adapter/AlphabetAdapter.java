@@ -53,7 +53,7 @@ public class AlphabetAdapter extends BaseAdapter {
 
     private final String[] characters = {
             "a", "á", "b", "c", "d", "e", "é", "f", "g", "h", "i", "í", "j",
-            "k", "l", "m", "n", "ñ", "o", "ó", "p", "q", "r", "s", "t",
+            "k", "l", "m", "n", "ñ", "o", "ó", "p", "q", "r", "s", "t", "v",
             "u", "ú", "ü", "w", "x", "y", "z",
             "may.", "núm.",
             "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
@@ -62,7 +62,7 @@ public class AlphabetAdapter extends BaseAdapter {
 
     private final String[] brailleCharacters = {
             "a", "á", "b", "c", "d", "e", "é", "f", "g", "h", "i", "í", "j",
-            "k", "l", "m", "n", "ñ", "o", "ó", "p", "q", "r", "s", "t",
+            "k", "l", "m", "n", "ñ", "o", "ó", "p", "q", "r", "s", "t", "v",
             "u", "ú", "ü", "w", "x", "y", "z",
             "´", "#",
             "#a", "#b", "#c", "#d", "#e", "#f", "#g", "#h", "#i", "#j",

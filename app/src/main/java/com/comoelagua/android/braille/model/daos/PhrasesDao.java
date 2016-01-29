@@ -1,10 +1,13 @@
 package com.comoelagua.android.braille.model.daos;
 
+import android.content.res.Resources;
+
 import java.util.ArrayList;
 
 public class PhrasesDao extends WordsDao implements CrudDao {
 
-    public PhrasesDao() {
+    public PhrasesDao(Resources res) {
+        super(res);
     }
 
     @Override

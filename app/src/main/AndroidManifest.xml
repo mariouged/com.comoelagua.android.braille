@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.comoelagua.android.braille">
 
-    <uses-sdk android:minSdkVersion="18"
-        android:targetSdkVersion="23"></uses-sdk>
+    <uses-sdk
+        android:minSdkVersion="18"
+        android:targetSdkVersion="23"
+        tools:overrideLibrary="android.support.test.uiautomator.v18" />
 
     <application
         android:name=".BrailleApplication"
@@ -56,6 +59,14 @@
         <activity
             android:name=".ResultsExercisesActivity"
             android:label="@string/title_activity_results_exercises"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.comoelagua.android.braille.MainActivity" />
+        </activity>
+        <activity
+            android:name=".HelpActivity"
+            android:label="@string/title_activity_help"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
