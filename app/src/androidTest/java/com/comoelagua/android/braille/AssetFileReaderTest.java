@@ -31,36 +31,50 @@ import java.io.InputStreamReader;
 public class AssetFileReaderTest extends InstrumentationTestCase {
 
     private Context context;
+    private AssetManager assetManager;
 
     @Before
     public void setUp() {
         context = getInstrumentation().getTargetContext();
+        assetManager = context.getAssets();
+    }
+
+    @Test
+    public void testAssetsList() {
+        boolean assetsDataExists = false;
+        boolean assetsFontExists = false;
+        try {
+            String[] list = assetManager.list("");
+            for (int i = 0; i < list.length; i++) {
+                Log.d("list assets/ ", list[i]);
+                if ("data".equals( list[i] )) {
+                    assetsDataExists = true;
+                } else if("fonts".equals( list[i] )) {
+                    assetsFontExists = true;
+                }
+            }
+        } catch (IOException e) {
+            Log.e("IOException", e.getMessage());
+        }
+        org.junit.Assert.assertTrue("assets/data exists", assetsDataExists);
+        org.junit.Assert.assertTrue("assets/fonts exists", assetsFontExists);
     }
 
     @Test
     public void testReadFile() {
-        AssetManager assetManager = context.getAssets();
-
-        try {
-            String[] list = assetManager.list("");
-            String[] listRoot = assetManager.list("/");
-            String[] listAssets = assetManager.list("assets");
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         BufferedReader reader;
+        String wordTxt = null;
         try {
             InputStream is = assetManager.open("data/words.txt");
             reader = new BufferedReader(new InputStreamReader(is));
             String line;
             while ((line = reader.readLine()) != null) {
-                Log.d("line ", line);
+                wordTxt = line;
             }
             reader.close();
         } catch (IOException e) {
             Log.e("IOException", e.getMessage());
         }
+        org.junit.Assert.assertNotNull(wordTxt);
     }
 }
