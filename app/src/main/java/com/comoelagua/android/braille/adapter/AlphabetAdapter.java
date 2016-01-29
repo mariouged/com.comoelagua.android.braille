@@ -1,6 +1,7 @@
 package com.comoelagua.android.braille.adapter;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,9 +14,14 @@ import com.comoelagua.android.braille.R;
 public class AlphabetAdapter extends BaseAdapter {
 
     private Context context;
+    private String[] characters;
+    private String[] brailleCharacters;
 
     public AlphabetAdapter(Context c) {
         context = c;
+        Resources res = context.getResources();
+        characters = res.getStringArray(R.array.characters);
+        brailleCharacters = res.getStringArray(R.array.brailleCharacters);
     }
 
     @Override
@@ -51,21 +57,21 @@ public class AlphabetAdapter extends BaseAdapter {
         return rowView;
     }
 
-    private final String[] characters = {
+    /*private final String[] characters = {
             "a", "á", "b", "c", "d", "e", "é", "f", "g", "h", "i", "í", "j",
             "k", "l", "m", "n", "ñ", "o", "ó", "p", "q", "r", "s", "t", "v",
             "u", "ú", "ü", "w", "x", "y", "z",
             "may.", "núm.",
             "1", "2", "3", "4", "5", "6", "7", "8", "9", "0",
             ",", ";", ":", ".", "-", "(", ")", "\"", "\"", "¿", "?", "¡", "!"
-    };
+    };*/
 
-    private final String[] brailleCharacters = {
+    /*private final String[] brailleCharacters = {
             "a", "á", "b", "c", "d", "e", "é", "f", "g", "h", "i", "í", "j",
             "k", "l", "m", "n", "ñ", "o", "ó", "p", "q", "r", "s", "t", "v",
             "u", "ú", "ü", "w", "x", "y", "z",
             "´", "#",
             "#a", "#b", "#c", "#d", "#e", "#f", "#g", "#h", "#i", "#j",
             ",", ";", ":", ".", "-", "(", ")", "\"", "\"", "¿", "?", "¡", "!"
-    };
+    };*/
 }
