@@ -15,7 +15,6 @@
  */
 package com.comoelagua.android.braille;
 
-import android.content.Context;
 import android.content.res.Resources;
 import android.test.InstrumentationTestCase;
 

@@ -36,6 +36,7 @@ import com.comoelagua.android.braille.R;
 import com.comoelagua.android.braille.ResultsExercisesActivity;
 import com.comoelagua.android.braille.model.beans.ResultExercise;
 import com.comoelagua.android.braille.model.beans.Word;
+import com.comoelagua.android.braille.model.daos.PhrasesDao;
 import com.comoelagua.android.braille.model.daos.WordsDao;
 
 import java.util.ArrayList;
@@ -102,10 +103,12 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
     public abstract void setWordType();
 
     public void loadWordsList() {
-        WordsDao wordsDao = ((BrailleApplication) getApplicationContext()).getWordsDao();
+        // must Override this method
         if ("phrase".equals(wordType)) {
-            wordsList = wordsDao.readPhrasesRandom( maxSize );
+            PhrasesDao phrasesDao = ((BrailleApplication) getApplicationContext()).getPhrasesDao();
+            wordsList = phrasesDao.readRandom( maxSize );
         } else {
+            WordsDao wordsDao = ((BrailleApplication) getApplicationContext()).getWordsDao();
             wordsList = wordsDao.readRandom(maxSize);
         }
     }

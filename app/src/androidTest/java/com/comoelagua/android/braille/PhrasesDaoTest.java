@@ -15,31 +15,30 @@
  */
 package com.comoelagua.android.braille;
 
-import android.app.Application;
+import android.content.res.Resources;
+import android.test.InstrumentationTestCase;
 
-import com.comoelagua.android.braille.model.daos.WordsDao;
 import com.comoelagua.android.braille.model.daos.PhrasesDao;
 
-public class BrailleApplication extends Application {
+import org.junit.Before;
+import org.junit.Test;
 
-    private WordsDao wordsDao;
+import java.util.ArrayList;
+
+public class PhrasesDaoTest extends InstrumentationTestCase {
+
     private PhrasesDao phrasesDao;
 
-    public BrailleApplication() {
-        super();
+    @Before
+    public void setUp() {
+        Resources res = getInstrumentation().getTargetContext().getResources();
+        phrasesDao = new PhrasesDao(res);
     }
 
-    public WordsDao getWordsDao() {
-        if (wordsDao == null) {
-            wordsDao = new WordsDao(getResources());
-        }
-        return wordsDao;
-    }
-
-    public PhrasesDao getPhrasesDao() {
-        if (phrasesDao == null) {
-            phrasesDao = new PhrasesDao(getResources());
-        }
-        return phrasesDao;
+    @Test
+    public void testReadAll() {
+        ArrayList phrasesList = phrasesDao.readAll();
+        org.junit.Assert.assertTrue("word list > 0", phrasesList.size() > 0);
+        org.junit.Assert.assertNotNull( phrasesList.get(0) );
     }
 }

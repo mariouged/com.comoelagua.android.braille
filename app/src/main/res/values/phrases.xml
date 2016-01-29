@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="phrases">
+        <item>A buen entendedor, pocas palabras bastan</item>
+        <item>A buenas horas mangas verdes</item>
+        <item>A bulto</item>
+        <item>A caballo regalado, no le mires el dentado</item>
+        <item>A Dios rogando y con el mazo dando</item>
+        <item>A falta de pan buenas son tortas</item>
+        <item>A fin de cuentas</item>
+        <item>A la buena de Dios</item>
+        <item>A la fuerza ahorcan</item>
+        <item>A la vuelta de la esquina</item>
+        <item>A lo hecho, pecho</item>
+        <item>A mal tiempo, buena cara</item>
+        <item>A menos bulto, más claridad</item>
+        <item>A ojo de buen cubero</item>
+        <item>A otra cosa, mariposa</item>
+        <item>A otro perro con ese hueso</item>
+        <item>A palabras necias, oídos sordos</item>
+        <item>A palo seco</item>
+        <item>A perro flaco, todo son pulgas</item>
+        <item>A propósito</item>
+        <item>A quien a buen árbol se arrima, buena sombra le cobija</item>
+        <item>A quien madruga Dios le ayuda</item>
+        <item>A rey muerto, rey puesto</item>
+        <item>A todo cerdo le llega su San Martín</item>
+        <item>A vivir que son dos días</item>
+        <item>Adonde fueres haz lo que vieres</item>
+        <item>Agua que no has de beber déjala correr</item>
+        <item>Ahogarse en un vaso de agua</item>
+        <item>Ahuecar el ala</item>
+        <item>Al pan, pan y al vino, vino</item>
+        <item>Alguien que es más fácil saltarlo que darle la vuelta</item>
+        <item>Anda ya!</item>
+        <item>Anímate!</item>
+        <item>Arrimar el hombro</item>
+        <item>Arrojar perlas a los cerdos</item>
+        <item>Aunque la mona se vista de seda, mona se queda</item>
+        <item>Bajar la guardia</item>
+        <item>Borracho como una cuba</item>
+        <item>Cada maestrillo tiene su librillo</item>
+        <item>Cada mochuelo a su olivo</item>
+        <item>Caer en saco roto</item>
+        <item>Cálmate!</item>
+        <item>Cambiar de chaqueta</item>
+        <item>Cantar las cuarenta</item>
+        <item>Cargar con el mochuelo</item>
+        <item>Carpe Diem!</item>
+        <item>Cenceño</item>
+        <item>Cierra la puerta</item>
+        <item>Cojonudo</item>
+        <item>Como agua de mayo</item>
+        <item>¿Cómo es eso? ¿Por qué?</item>
+        <item>Como Pedro por su casa</item>
+        <item>Como un libro abierto</item>
+        <item>Con la iglesia hemos topado</item>
+        <item>Con la miel en los labios</item>
+        <item>Corpulento</item>
+        <item>Coser y cantar</item>
+        <item>Costar un huevo</item>
+        <item>Costar un ojo de la cara</item>
+        <item>Costar un riñón</item>
+        <item>Cría fama y échate a dormir</item>
+        <item>Cross your fingers</item>
+        <item>Cruzar los dedos</item>
+        <item>Cuando a uno le quedan 2 telediarios</item>
+        <item>Cuando algo es otro cantar</item>
+        <item>Cuando algo o alguien es la bomba</item>
+        <item>Cuando seas padre, comerás huevo</item>
+        <item>Dar en el clavo</item>
+        <item>Date prisa!</item>
+        <item>De bien nacidos es ser agradecidos</item>
+        <item>De cara a la galería</item>
+        <item>De nada (después de decir gracias)</item>
+        <item>De pocas carnes</item>
+        <item>De tal palo tal astilla</item>
+        <item>De verdad!</item>
+        <item>Déjame en paz</item>
+        <item>Delgaducho</item>
+        <item>Descojonarse</item>
+        <item>Diálogo de besugos</item>
+        <item>Dime cuánto (para comida o bebidas)</item>
+        <item>Dios los cría y ellos se juntan</item>
+        <item>Dorar la píldora</item>
+        <item>Dormir como un ceporro</item>
+        <item>Dormir la mona</item>
+        <item>Dormirse en los laureles</item>
+        <item>Echar leña al fuego</item>
+        <item>Echar margaritas a los cerdos</item>
+        <item>El fútbol es así</item>
+        <item>El hábito no hace al monje</item>
+        <item>El horno no está para bollos</item>
+        <item>El mismo perro con distinto collar</item>
+        <item>El mundo es un pañuelo</item>
+        <item>El que algo quiere, algo le cuesta</item>
+        <item>El que espera, desespera</item>
+        <item>El que la sigue la consigue</item>
+        <item>El que mucho abarca poco aprieta</item>
+        <item>El que quiera peces que se moje el culo</item>
+        <item>El quinto pino</item>
+        <item>El talón de Aquiles</item>
+        <item>El uno por el otro la casa sin barrer</item>
+        <item>En boca cerrada no entran moscas</item>
+        <item>En casa de herrero, cuchillo de palo</item>
+        <item>En el reino de los ciegos, el tuerto es el rey</item>
+        <item>En mi opinión</item>
+        <item>En peores garitas hemos hecho guardia</item>
+        <item>En todas partes cuecen habas</item>
+        <item>Entre ceja y ceja</item>
+        <item>Entre pitos y flautas</item>
+        <item>Éramos pocos y parió la abuela</item>
+        <item>Es peor el remedio que la enfermedad</item>
+        <item>Estar en la gloria</item>
+        <item>Escuálido</item>
+        <item>Escurrir el bulto</item>
+        <item>Estar acojonado</item>
+        <item>Estar borracho</item>
+        <item>Estar cascado</item>
+        <item>Estar cogido con alfileres</item>
+        <item>Estar cogido con pinzas</item>
+        <item>Estar como el quico</item>
+        <item>Estar como pez en el agua</item>
+        <item>Estar como una cuba</item>
+        <item>Estar de buen año</item>
+        <item>Estar de buen ver</item>
+        <item>Estar de miranda</item>
+        <item>Estar entrado en carnes</item>
+        <item>Estar entre los brazos de Morfeo</item>
+        <item>Estar espeso</item>
+        <item>Estar flaco</item>
+        <item>Estar hasta los cojones</item>
+        <item>Estar hecho un cristo</item>
+        <item>Estar hecho un flan</item>
+        <item>Estar hecho un trapo</item>
+        <item>Estar hermoso</item>
+        <item>Estar para mojar pan</item>
+        <item>Estar patas arriba</item>
+        <item>Estar piripi</item>
+        <item>Estar rollizo</item>
+        <item>Estar siempre con la misma canción</item>
+        <item>Estar tan delgado que llueve y no te mojas</item>
+        <item>Estar zamproño</item>
+        <item>Estás de broma</item>
+        <item>Esto es Jauja</item>
+        <item>Faltar un tornillo</item>
+        <item>Ha pasado un ángel</item>
+        <item>Haber pillado un buen pedal</item>
+        <item>Hablando del rey de Roma</item>
+        <item>Hablando del rey de Roma, por la puerta asoma</item>
+        <item>Hablar por los codos</item>
+        <item>Hacer algo a troche y moche</item>
+        <item>Hacer borrón y cuenta nueva</item>
+        <item>Hacer buenas migas</item>
+        <item>Hacer bulto</item>
+        <item>Hacer el mono</item>
+        <item>Hacer la cabra</item>
+        <item>Hacer la pelota</item>
+        <item>Hacer la visita del médico</item>
+        <item>Hacer leña del árbol caído</item>
+        <item>Hacerse el sueco</item>
+        <item>Hacerse el sueco</item>
+        <item>Hacerse la boca agua</item>
+        <item>Hacía un frío de cojones</item>
+        <item>Hasta el rabo todo es toro</item>
+        <item>Hondonadas de hostias</item>
+        <item>Hostia</item>
+        <item>Hoy por ti mañana por mí</item>
+        <item>Ir a toda hostia</item>
+        <item>Ir al grano</item>
+        <item>Ir bien cocido</item>
+        <item>Ir bolinga</item>
+        <item>Ir ciego</item>
+        <item>Ir con pies de plomo</item>
+        <item>Ir ebrio</item>
+        <item>Ir hecho un Ecce Homo</item>
+        <item>Ir mamado</item>
+        <item>Ir pisando huevos</item>
+        <item>Irse bebiendo hasta el agua de los floreros</item>
+        <item>Irse con la música a otra parte</item>
+        <item>Irse por los cerros de Úbeda</item>
+        <item>Jesús! (cuando alguien estornuda)</item>
+        <item>La avaricia rompe el saco</item>
+        <item>La cabra siempre tira al monte</item>
+        <item>La esperanza es lo último que se pierde</item>
+        <item>La gota que colmó el vaso</item>
+        <item>La media naranja</item>
+        <item>La pescadilla que se muerde la cola</item>
+        <item>Lágrimas de cocodrilo</item>
+        <item>Le costó mil pares de huevos</item>
+        <item>Le ha salido el tiro por la culata</item>
+        <item>Liarse la manta a la cabeza</item>
+        <item>Ligar con alguien</item>
+        <item>Llegar y besar el santo</item>
+        <item>Llevar la voz cantante</item>
+        <item>Llevar los pantalones</item>
+        <item>Llevar un buen melocotón</item>
+        <item>Llevar un buen pedo o ir pedo perdido</item>
+        <item>Llevar un buen puntazo</item>
+        <item>Llevar una buena cogorza</item>
+        <item>Llevar una buena melopea</item>
+        <item>Llevar una buena mierda encima</item>
+        <item>Llevarse como el perro y el gato</item>
+        <item>Llevarse el gato al agua</item>
+        <item>Llover a mares o llover a cántaros</item>
+        <item>Llueve sobre mojado</item>
+        <item>Lo haré por cojones</item>
+        <item>Lo mereces</item>
+        <item>Los huevos, ingrediente indispensable de muchas expresiones españolas</item>
+        <item>Mal de muchos, consuelo de tontos</item>
+        <item>Mala hierba nunca muere</item>
+        <item>Manga por Hombro</item>
+        <item>Más claro que el agua</item>
+        <item>Más vale pájaro en mano que ciento volando</item>
+        <item>Más vale tarde que nunca</item>
+        <item>Más vale tarde que nunca</item>
+        <item>Más vale tarde que nunca</item>
+        <item>Matar dos pájaros de un tiro</item>
+        <item>Matar el gusanillo</item>
+        <item>Matar moscas a cañonazos</item>
+        <item>Me estás tomando el pelo</item>
+        <item>Me ha salido rana</item>
+        <item>Me importa 3 huevos</item>
+        <item>Me sabe mal</item>
+        <item>Me salió de cojones</item>
+        <item>Me suena</item>
+        <item>Me toca los huevos</item>
+        <item>Meter el dedo en la llaga</item>
+        <item>Meter cizaña</item>
+        <item>Meter la pata</item>
+        <item>Miel sobre hojuelas</item>
+        <item>Mojar</item>
+        <item>Mojar a alguien</item>
+        <item>Mojar la cama</item>
+        <item>Mojar la camiseta</item>
+        <item>Mojar un evento</item>
+        <item>Mojarse</item>
+        <item>Monto un circo y me crecen los enanos</item>
+        <item>Morir de éxito</item>
+        <item>Mucho ruido y pocas nueces</item>
+        <item>Muerto el perro, se acabó la rabia</item>
+        <item>Ni fu ni fa</item>
+        <item>Ni harto de vino</item>
+        <item>Ni me va ni me viene</item>
+        <item>No dar el brazo a torcer</item>
+        <item>No dar un palo al agua</item>
+        <item>No dejes para mañana lo que puedas hacer hoy</item>
+        <item>No es oro todo lo que reluce</item>
+        <item>No faltaría mas</item>
+        <item>No hay mal que por bien no venga</item>
+        <item>No hay peor ciego que el que no quiere ver</item>
+        <item>No me extraña</item>
+        <item>No pegar ojo</item>
+        <item>No pegar ni con cola</item>
+        <item>No por mucho madrugar, amanece más temprano</item>
+        <item>No se hizo la miel para la boca del asno</item>
+        <item>No se puede vender la piel del oso antes de cazarlo</item>
+        <item>No ser trigo limpio</item>
+        <item>No sólo de pan vive el hombre</item>
+        <item>No tener abuela</item>
+        <item>No tengo ni idea</item>
+        <item>No todo el monte es orégano</item>
+        <item>Nos ha salido redondo</item>
+        <item>Nos ha tocado el gordo</item>
+        <item>Nunca digas de este agua no beberé</item>
+        <item>Ojos que no ven, corazón que no siente</item>
+        <item>Olerse la tostada</item>
+        <item>Otro gallo cantaría</item>
+        <item>Pagar en efectivo</item>
+        <item>Pan para hoy y hambre para mañana</item>
+        <item>Parecer un spaguetti</item>
+        <item>Pasar página</item>
+        <item>Pasar por el aro</item>
+        <item>Pasarse 3 pueblos</item>
+        <item>Pedirle peras al olmo</item>
+        <item>Perder el Norte</item>
+        <item>Perro ladrador poco mordedor</item>
+        <item>Pillar una tajada o ir con la tajá</item>
+        <item>Pintar la mona</item>
+        <item>Poner cara de póquer</item>
+        <item>Poner los huevos sobre la mesa</item>
+        <item>Poner los puntos sobre las íes</item>
+        <item>Ponerse las pilas</item>
+        <item>Ponerse morado</item>
+        <item>Por H o por B</item>
+        <item>Por la boca muere el pez</item>
+        <item>Por si las moscas</item>
+        <item>Por supuesto</item>
+        <item>Porque hoy es hoy</item>
+        <item>Qué aproveche o Buen provecho</item>
+        <item>Qué cara!</item>
+        <item>Qué lío!</item>
+        <item>Que me quiten lo bailao</item>
+        <item>Que si quieres arroz Catalina</item>
+        <item>Qué timo!</item>
+        <item>Quedarse a cuadros</item>
+        <item>Quedarse con la copla</item>
+        <item>Quedarse en el tintero</item>
+        <item>Quedarse frito</item>
+        <item>Quédate con el cambio</item>
+        <item>Quien evita la ocasión evita el peligro</item>
+        <item>Quien siembra vientos recoge tempestades</item>
+        <item>Rascarse la barriga</item>
+        <item>Revelar un secreto</item>
+        <item>Reza, pero sigue remando</item>
+        <item>Rizar el rizo</item>
+        <item>Romper el hielo</item>
+        <item>Saber a gloria</item>
+        <item>Sacar las castañas del fuego</item>
+        <item>Salir del armario</item>
+        <item>Salirse de madre</item>
+        <item>Salud!</item>
+        <item>Salvarse por los pelos</item>
+        <item>Sarna con gusto no pica</item>
+        <item>Se le va la olla a alguien</item>
+        <item>Se me ha ido el santo al cielo</item>
+        <item>Ser alguien de abultadas carnes</item>
+        <item>Ser alguien inmenso</item>
+        <item>Ser como el perro del hortelano, que ni come ni deja comer</item>
+        <item>Ser como un libro abierto</item>
+        <item>Ser de la cofradía del puño</item>
+        <item>Ser de la virgen del puño</item>
+        <item>Ser de piedra</item>
+        <item>Ser despedido</item>
+        <item>Ser flor de un día</item>
+        <item>Ser la hostia</item>
+        <item>Ser la oveja negra</item>
+        <item>Ser más caro el collar que el perro</item>
+        <item>Ser más corto que las mangas de un chaleco</item>
+        <item>Ser más papista que el Papa</item>
+        <item>Ser pan comido</item>
+        <item>Ser todo oídos (o ser toda oídos)</item>
+        <item>Ser un aguafiestas</item>
+        <item>Ser un bala perdida</item>
+        <item>Ser un chaquetero</item>
+        <item>Ser un correveidile</item>
+        <item>Ser un gorrón</item>
+        <item>Ser un manitas</item>
+        <item>Ser un pedazo de pan</item>
+        <item>Ser un peliculero</item>
+        <item>Ser un pelota</item>
+        <item>Ser un tiquismiquis</item>
+        <item>Ser una monada</item>
+        <item>Ser uña y carne</item>
+        <item>Si las barbas de tu vecino ves cortar, pon las tuyas a remojar</item>
+        <item>Si lloras por no haber visto el Sol las lágrimas te impedirán ver las estrellas</item>
+        <item>Siéntete como en tu casa</item>
+        <item>Sin comerlo ni beberlo</item>
+        <item>Sírvete</item>
+        <item>Sobre gustos no hay nada escrito</item>
+        <item>Ten cuidado!</item>
+        <item>Tener el mono</item>
+        <item>Tener enchufe</item>
+        <item>Tener huevos</item>
+        <item>Tener la mosca detrás de la oreja</item>
+        <item>Tener la sartén por el mango</item>
+        <item>Tener mala hostia</item>
+        <item>Tener más cara que espalda</item>
+        <item>Tener más cuento que Calleja</item>
+        <item>Tener mucho morro</item>
+        <item>Tener muchos tiros pegaos</item>
+        <item>Tener pocas luces</item>
+        <item>Tener un as en la manga</item>
+        <item>Tener un morro que se lo pisa</item>
+        <item>Tengo que irme</item>
+        <item>Tiene huevos la cosa</item>
+        <item>Tiene un par de huevos</item>
+        <item>Tirar de la manta</item>
+        <item>Tirar la piedra y esconder la mano</item>
+        <item>Tirar la toalla</item>
+        <item>Tirar los tejos</item>
+        <item>Tirarse los trastos a la cabeza</item>
+        <item>Tocando madera</item>
+        <item>Tocarse los huevos</item>
+        <item>Tócate los huevos</item>
+        <item>Tomamos la penúltima</item>
+        <item>Tomar el pelo</item>
+        <item>Tropezar dos veces con la misma piedra</item>
+        <item>Tú eliges</item>
+        <item>Un aguafiestas</item>
+        <item>Un día es un día</item>
+        <item>Una libra</item>
+        <item>Una resaca</item>
+        <item>Verse a la legua</item>
+        <item>Y un huevo</item>
+        <item>Yo también</item>
+        <item>Zapatero a tus zapatos</item>
+    </string-array>
+</resources>
