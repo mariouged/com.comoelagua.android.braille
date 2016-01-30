@@ -38,7 +38,14 @@ public class PhrasesDaoTest extends InstrumentationTestCase {
     @Test
     public void testReadAll() {
         ArrayList phrasesList = phrasesDao.readAll();
-        org.junit.Assert.assertTrue("word list > 0", phrasesList.size() > 0);
-        org.junit.Assert.assertNotNull( phrasesList.get(0) );
+        org.junit.Assert.assertTrue("word list > 10", phrasesList.size() > 10);
+        org.junit.Assert.assertNotNull( phrasesList.get(10) );
+    }
+
+    @Test
+    public void testReadRandom() {
+        ArrayList phrasesList = phrasesDao.readRandom(10);
+        org.junit.Assert.assertTrue("phrases list size == 10", phrasesList.size() == 10);
+        org.junit.Assert.assertNotNull(phrasesList.get(9));
     }
 }

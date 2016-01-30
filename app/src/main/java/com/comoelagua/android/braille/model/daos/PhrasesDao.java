@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class PhrasesDao {
 
     private Resources res;
+    private ArrayList phrasesListAll = null;
 
     public PhrasesDao(Resources res) {
         this.res = res;
@@ -26,12 +27,15 @@ public class PhrasesDao {
     }
 
     public ArrayList<Word> readAll() {
-        ArrayList phrasesList = new ArrayList<Word>();
+        if (phrasesListAll != null) {
+            return phrasesListAll;
+        }
+        ArrayList phrasesListAll = new ArrayList<Word>();
         String[] phrases = res.getStringArray(R.array.phrases);
         for (int i = 0; i < phrases.length; i++) {
-            phrasesList.add( new Word(1 + i, phrases[i]) );
+            phrasesListAll.add( new Word(1 + i, phrases[i]) );
         }
 
-        return phrasesList;
+        return phrasesListAll;
     }
 }

@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class WordsDao implements CrudDao {
 
     private Resources res;
+    private ArrayList wordsListAll = null;
 
     public WordsDao(Resources res) {
         this.res = res;
@@ -60,13 +61,16 @@ public class WordsDao implements CrudDao {
     }
 
     public ArrayList<Word> readAll() {
-        ArrayList wordsList = new ArrayList<Word>();
+        if (wordsListAll != null) {
+            return wordsListAll;
+        }
+        ArrayList wordsListAll = new ArrayList<Word>();
         String[] wordsArray = res.getStringArray(R.array.words);
         for (int i = 0; i < wordsArray.length; i++) {
-            wordsList.add( new Word(1 + i, wordsArray[i]) );
+            wordsListAll.add( new Word(1 + i, wordsArray[i]) );
         }
 
-        return wordsList;
+        return wordsListAll;
     }
 
 }
