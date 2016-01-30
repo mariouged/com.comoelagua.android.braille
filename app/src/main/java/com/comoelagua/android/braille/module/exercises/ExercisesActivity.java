@@ -36,6 +36,7 @@ import com.comoelagua.android.braille.R;
 import com.comoelagua.android.braille.ResultsExercisesActivity;
 import com.comoelagua.android.braille.model.beans.ResultExercise;
 import com.comoelagua.android.braille.model.beans.Word;
+import com.comoelagua.android.braille.model.beans.actions.WordCompare;
 import com.comoelagua.android.braille.model.daos.PhrasesDao;
 import com.comoelagua.android.braille.model.daos.WordsDao;
 
@@ -52,6 +53,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
     protected String wordType;
     protected ArrayList<Word> wordsList;
     protected Word currentWord;
+    protected WordCompare wordCompare;
     protected int askNumber = 0;
     protected int maxSize = 10;
     protected int ok = 0;
@@ -75,6 +77,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         Typeface typeFace = Typeface.createFromAsset(getAssets(), "fonts/Braille6-ANSI.ttf");
         askTextView.setTypeface(typeFace);
 
+        wordCompare = new WordCompare();
         resultExercise = new ResultExercise();
 
         setWordType();
@@ -127,7 +130,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
             return;
         }
         String answer = answerEditText.getText().toString();
-        if (currentWord.checkEquals(answer)) {
+        if (wordCompare.checkEquals(currentWord.getWord(), answer)) {
             ok++;
             continueAsk(view);
             return;
@@ -149,12 +152,12 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
     }
 
     public void answerFail(View view) {
-        List<Integer> errorsList = currentWord.getErrorsList();
+        List<Integer> positionsErrorsList = wordCompare.getPositionsErrorsList();
         Spannable answerSpannable = (Spannable) answerEditText.getText();
-        for(Integer positionError : errorsList) {
+        for(Integer positionError : positionsErrorsList) {
             answerSpannable.setSpan( new ForegroundColorSpan(Color.RED), positionError.intValue(), 1 + positionError.intValue(), Spannable.SPAN_COMPOSING);
         }
-        resultExercise.addAllcharactersErrorsList(currentWord.getCharactersErrorsList());
+        resultExercise.addAllcharactersErrorsList(wordCompare.getCharactersErrorsList());
 
     }
 
