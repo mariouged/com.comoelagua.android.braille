@@ -18,6 +18,7 @@ package com.comoelagua.android.braille.module.exercises;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
@@ -121,6 +122,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         askNumberTextView.setText(" " + (1 + askNumber) );
         askTextView.setText(word.getWord());
         answerEditText.setText("");
+        nextButton.setBackgroundColor(getResources().getColor(R.color.nextButton));
     }
 
     public void nextAsk(View view) {
@@ -158,7 +160,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
             answerSpannable.setSpan( new ForegroundColorSpan(Color.RED), positionError.intValue(), 1 + positionError.intValue(), Spannable.SPAN_COMPOSING);
         }
         resultExercise.addAllcharactersErrorsList(wordCompare.getCharactersErrorsList());
-
+        nextButton.setBackgroundColor(getResources().getColor(R.color.nextButtonFail));
     }
 
     public void showResult() {
