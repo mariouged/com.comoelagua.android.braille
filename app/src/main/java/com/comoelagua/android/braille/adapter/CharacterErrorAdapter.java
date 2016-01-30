@@ -49,7 +49,7 @@ public class CharacterErrorAdapter extends BaseAdapter {
         TextView brailleTextView = (TextView) rowView.findViewById(R.id.brailleTextView);
         brailleTextView.setText(charactersErrorsList.get(position));
 
-        Typeface typeFace = Typeface.createFromAsset(context.getAssets(), "fonts/Braille6-ANSI.ttf");
+        Typeface typeFace = Typeface.createFromAsset(context.getAssets(), context.getString(R.string.Braille6_ANSI));
         brailleTextView.setTypeface(typeFace);
 
         return rowView;
