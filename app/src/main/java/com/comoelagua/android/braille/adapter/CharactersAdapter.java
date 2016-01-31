@@ -50,7 +50,7 @@ public class CharactersAdapter extends BaseAdapter {
         TextView brailleTextView = (TextView) rowView.findViewById(R.id.brailleTextView);
         brailleTextView.setText(asciiChar);
 
-        Typeface typeFace = Typeface.createFromAsset(context.getAssets(), context.getString(R.string.Braille6_ANSI));
+        Typeface typeFace = Typeface.createFromAsset(context.getAssets(), context.getString(R.string.brailleFont));
         brailleTextView.setTypeface(typeFace);
 
         return rowView;
