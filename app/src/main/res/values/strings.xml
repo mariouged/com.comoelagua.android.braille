@@ -37,7 +37,24 @@
     <string name="bestTimeLabel">Mejor</string>
     <string name="title_activity_help">Ayuda</string>
     <string name="mainParagraph">
-        Aprende Braille, primero repasa el alfabeto y luego haz ejercicios de palabras, cuando tengas cero fallos, pasa a los ejercicios de frases.
+        \nEl sistema Braille es un alfabeto, apartir del signo generador
+        \n1 4
+        \n2 5
+        \n3 6
+        \na partir de estos seis puntos se pueden generar 63 combinaciones para representar las letras del abecedario.
+        \nPor ejemplo la l sería
+        \n1
+        \n2
+        \n3
+        \nPor ejemplo la m sería
+        \n1 4
+        \n
+        \n3
+    </string>
+    <string name="helpParagraph">
+        \nAprende Braille, primero repasa el alfabeto, haz ejercicios de letras para practicar y aprenderlas todas.
+        \nCon los ejercicios de palabras terminarás de aprender el alfabeto
+        \nPara el nivel más avanzado haz ejercicios de frases.
         \n
         \nLamentandolo mucho sólo sirve para que aprendan videntes: profesores, amigos, familiares.
         \nPor el momento:
