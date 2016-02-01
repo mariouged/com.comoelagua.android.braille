@@ -22,6 +22,8 @@ import com.comoelagua.android.braille.model.daos.PhrasesDao;
 import com.comoelagua.android.braille.model.daos.WordsDao;
 import com.comoelagua.android.braille.model.daos.interfaces.WordsDaoInterface;
 
+import java.util.Hashtable;
+
 public class DaosContainer {
 
     protected Resources res;
@@ -30,12 +32,24 @@ public class DaosContainer {
     public static final String PHRASES_DAO_TYPE = "phrases";
     public static final String CHARACTERS_DAO_TYPE = "characters";
 
+    protected Hashtable<String, WordsDaoInterface> daosHastable;
 
     public DaosContainer(Resources res) {
         this.res = res;
+        daosHastable = new Hashtable<String, WordsDaoInterface>();
     }
 
     public WordsDaoInterface getWordsDao(String type) {
+        if (daosHastable.containsKey(type)) {
+            return daosHastable.get(type);
+        }
+
+        WordsDaoInterface wordsDaoInterface = factoryWordsDao(type);
+        daosHastable.put(type, wordsDaoInterface);
+        return wordsDaoInterface;
+    }
+
+    protected WordsDaoInterface factoryWordsDao(String type) {
         if (CHARACTERS_DAO_TYPE.equals(type)) {
             return new CharactersDao(res);
         } else if (WORDS_DAO_TYPE.equals(type)) {
@@ -45,4 +59,5 @@ public class DaosContainer {
         }
         return null;
     }
+
 }

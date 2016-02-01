@@ -37,7 +37,9 @@ public class DaosContainerTest extends InstrumentationTestCase {
     public void testGetWordsDaos() {
         DaosContainer daosContainer = new DaosContainer(res);
         WordsDaoInterface wordDao = daosContainer.getWordsDao(DaosContainer.WORDS_DAO_TYPE);
-
         assertNotNull(wordDao);
+
+        WordsDaoInterface wordDaoSecondFactory = daosContainer.getWordsDao(DaosContainer.WORDS_DAO_TYPE);
+        assertEquals("its same dao", wordDao, wordDaoSecondFactory);
     }
 }
