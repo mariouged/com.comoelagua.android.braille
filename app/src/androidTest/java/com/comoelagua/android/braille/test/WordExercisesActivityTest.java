@@ -1,4 +1,4 @@
-package com.comoelagua.android.braille;
+package com.comoelagua.android.braille.test;
 
 import junit.framework.TestSuite;
 
@@ -14,6 +14,9 @@ import android.support.test.runner.AndroidJUnitRunner;
 import android.test.ActivityInstrumentationTestCase2;
 import android.test.suitebuilder.annotation.LargeTest;
 import android.widget.TextView;
+
+import com.comoelagua.android.braille.R;
+import com.comoelagua.android.braille.WordExercisesActivity;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
@@ -36,7 +39,7 @@ public class WordExercisesActivityTest {
     @Test
     public void testSetAnswerOK() {
         String word = ((TextView) wordExercisesActivityRule.getActivity().findViewById(R.id.ask)).getText().toString();
-        onView(withId(R.id.answer)).perform(typeText(word), closeSoftKeyboard());
+        onView(withId(R.id.answer)).perform(replaceText(word));
         onView(withId(R.id.next)).perform(click());
         // OK if askNumber after click is 2, has changed to next ask
         onView(withId(R.id.askNumber))

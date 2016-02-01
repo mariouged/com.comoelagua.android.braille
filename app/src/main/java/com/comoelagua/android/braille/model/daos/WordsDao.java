@@ -4,60 +4,27 @@ import android.content.res.Resources;
 
 import com.comoelagua.android.braille.R;
 import com.comoelagua.android.braille.model.beans.Word;
+import com.comoelagua.android.braille.model.daos.interfaces.WordsDaoInterface;
 
 import java.util.ArrayList;
 
-public class WordsDao implements CrudDao {
+public class WordsDao implements WordsDaoInterface {
 
-    private Resources res;
-    private ArrayList wordsListAll = null;
+    protected Resources res;
+    protected ArrayList wordsListAll = null;
 
     public WordsDao(Resources res) {
         this.res = res;
     }
 
-    @Override
-    public Object create(Object obj) {
-        return null;
-    }
-
-    @Override
-    public Object update(Object obj) {
-        return null;
-    }
-
-    @Override
-    public <T> ArrayList<T> read(ArrayList<Criteria> criteriaList) {
-        boolean random = false;
-        int length = 0;
-        for(Criteria criteria : criteriaList) {
-            if ("random".equals( criteria.getParameter() )) {
-                random = true;
-            }
-            if ("length".equals( criteria.getParameter() )) {
-                length = Integer.parseInt( criteria.getValue() );
-            }
-        }
-        if (random && length > 0) {
-            ArrayList<T> wordsList = (ArrayList<T>) readRandom(length);
-            return wordsList;
-        }
-        return null;
-    }
-
-    @Override
-    public boolean delete(Object object) {
-        return false;
-    }
-
     public ArrayList<Word> readRandom(int length) {
         ArrayList<Word> wordsList = readAll();
-        ArrayList<Word> shortWordsList = new ArrayList<Word>();
+        ArrayList<Word> randomWordsList = new ArrayList<Word>();
         for(int i = 0; i < length; i++) {
             int randomNum = (int) (Math.random() * wordsList.size() );
-            shortWordsList.add( wordsList.get(randomNum) );
+            randomWordsList.add( wordsList.get(randomNum) );
         }
-        return shortWordsList;
+        return randomWordsList;
     }
 
     public ArrayList<Word> readAll() {
@@ -65,7 +32,7 @@ public class WordsDao implements CrudDao {
             return wordsListAll;
         }
         ArrayList wordsListAll = new ArrayList<Word>();
-        String[] wordsArray = res.getStringArray(R.array.words);
+        String[] wordsArray = getStringArray();
         for (int i = 0; i < wordsArray.length; i++) {
             wordsListAll.add( new Word(1 + i, wordsArray[i]) );
         }
@@ -73,4 +40,7 @@ public class WordsDao implements CrudDao {
         return wordsListAll;
     }
 
+    public String[] getStringArray() {
+        return res.getStringArray(R.array.words);
+    }
 }

@@ -13,39 +13,43 @@
  *
  * Contact: <mario.ugedo@gmail.com>
  */
-package com.comoelagua.android.braille;
+package com.comoelagua.android.braille.test;
 
 import android.content.res.Resources;
 import android.test.InstrumentationTestCase;
 
-import com.comoelagua.android.braille.model.daos.PhrasesDao;
+import com.comoelagua.android.braille.model.daos.WordsDao;
+import com.comoelagua.android.braille.model.daos.containers.DaosContainer;
+import com.comoelagua.android.braille.model.daos.interfaces.WordsDaoInterface;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
-public class PhrasesDaoTest extends InstrumentationTestCase {
+public class WordsDaoTest extends InstrumentationTestCase {
 
-    private PhrasesDao phrasesDao;
+    private WordsDaoInterface wordsDao;
 
     @Before
     public void setUp() {
         Resources res = getInstrumentation().getTargetContext().getResources();
-        phrasesDao = new PhrasesDao(res);
+        DaosContainer daosContainer = new DaosContainer(res);
+        wordsDao = daosContainer.getWordsDao(DaosContainer.WORDS_DAO_TYPE);
     }
 
     @Test
     public void testReadAll() {
-        ArrayList phrasesList = phrasesDao.readAll();
-        org.junit.Assert.assertTrue("word list > 10", phrasesList.size() > 10);
-        org.junit.Assert.assertNotNull( phrasesList.get(10) );
+        ArrayList wordsList = wordsDao.readAll();
+        org.junit.Assert.assertTrue("word list > 10", wordsList.size() > 10);
+        org.junit.Assert.assertNotNull(wordsList.get(10));
     }
 
     @Test
     public void testReadRandom() {
-        ArrayList phrasesList = phrasesDao.readRandom(10);
-        org.junit.Assert.assertTrue("phrases list size == 10", phrasesList.size() == 10);
-        org.junit.Assert.assertNotNull(phrasesList.get(9));
+        ArrayList wordsList = wordsDao.readRandom(10);
+        org.junit.Assert.assertTrue("word list size == 10", wordsList.size() == 10);
+        org.junit.Assert.assertNotNull(wordsList.get(9));
     }
+
 }

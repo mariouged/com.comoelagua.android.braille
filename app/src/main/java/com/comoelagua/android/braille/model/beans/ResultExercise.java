@@ -22,6 +22,7 @@ public class ResultExercise implements Serializable {
 
     public final static String WORD_BEST_TIME_VALUE = "wordBestTimeValue";
     public final static String PHRASE_BEST_TIME_VALUE = "phraseBestTimeValue";
+    public final static String CHARACTER_BEST_TIME_VALUE = "characterBestTimeValue";
 
     public ResultExercise() {
         setWordType("word");
@@ -74,6 +75,8 @@ public class ResultExercise implements Serializable {
         String namePreference = WORD_BEST_TIME_VALUE;
         if ("phrase".equals(getWordType())) {
             namePreference = PHRASE_BEST_TIME_VALUE;
+        } else if ("character".equals(getWordType())) {
+            namePreference = CHARACTER_BEST_TIME_VALUE;
         }
         SharedPreferences preferences = appCompatActivity.getSharedPreferences(namePreference, 0);
         long bestTimeValue = preferences.getLong(namePreference, 9999999);

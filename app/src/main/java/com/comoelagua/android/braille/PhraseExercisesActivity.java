@@ -15,9 +15,9 @@
  */
 package com.comoelagua.android.braille;
 
-import com.comoelagua.android.braille.model.daos.PhrasesDao;
+import com.comoelagua.android.braille.model.daos.containers.DaosContainer;
+import com.comoelagua.android.braille.model.daos.interfaces.WordsDaoInterface;
 import com.comoelagua.android.braille.module.exercises.ExercisesActivity;
-import com.comoelagua.android.braille.model.daos.WordsDao;
 
 public class PhraseExercisesActivity extends ExercisesActivity {
 
@@ -30,7 +30,7 @@ public class PhraseExercisesActivity extends ExercisesActivity {
 
     @Override
     public void loadWordsList() {
-        PhrasesDao phrasesDao = ((BrailleApplication) getApplicationContext()).getPhrasesDao();
+        WordsDaoInterface phrasesDao = ((BrailleApplication) getApplicationContext()).getWordsDao(DaosContainer.PHRASES_DAO_TYPE);
         wordsList = phrasesDao.readRandom(maxSize);
     }
 }

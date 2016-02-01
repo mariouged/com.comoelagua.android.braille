@@ -13,7 +13,7 @@
  *
  * Contact: <mario.ugedo@gmail.com>
  */
-package com.comoelagua.android.braille;
+package com.comoelagua.android.braille.test;
 
 import android.support.test.espresso.Espresso;
 import android.support.test.espresso.ViewAction;
@@ -23,6 +23,9 @@ import android.support.test.runner.AndroidJUnit4;
 import android.test.suitebuilder.annotation.LargeTest;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.comoelagua.android.braille.PhraseExercisesActivity;
+import com.comoelagua.android.braille.R;
 
 import org.junit.Rule;
 import org.junit.Test;

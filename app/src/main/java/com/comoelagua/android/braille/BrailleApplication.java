@@ -17,29 +17,22 @@ package com.comoelagua.android.braille;
 
 import android.app.Application;
 
-import com.comoelagua.android.braille.model.daos.WordsDao;
-import com.comoelagua.android.braille.model.daos.PhrasesDao;
+import com.comoelagua.android.braille.model.daos.containers.DaosContainer;
+import com.comoelagua.android.braille.model.daos.interfaces.WordsDaoInterface;
 
 public class BrailleApplication extends Application {
 
-    private WordsDao wordsDao;
-    private PhrasesDao phrasesDao;
+    private DaosContainer daosContainer = null;
 
     public BrailleApplication() {
         super();
     }
 
-    public WordsDao getWordsDao() {
-        if (wordsDao == null) {
-            wordsDao = new WordsDao(getResources());
+    public WordsDaoInterface getWordsDao(String type) {
+        if (daosContainer == null) {
+            daosContainer = new DaosContainer(getResources());
         }
-        return wordsDao;
+        return daosContainer.getWordsDao(type);
     }
 
-    public PhrasesDao getPhrasesDao() {
-        if (phrasesDao == null) {
-            phrasesDao = new PhrasesDao(getResources());
-        }
-        return phrasesDao;
-    }
 }

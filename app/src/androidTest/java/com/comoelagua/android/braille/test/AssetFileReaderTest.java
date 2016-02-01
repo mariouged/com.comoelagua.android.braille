@@ -13,7 +13,7 @@
  *
  * Contact: <mario.ugedo@gmail.com>
  */
-package com.comoelagua.android.braille;
+package com.comoelagua.android.braille.test;
 
 import android.content.Context;
 import android.test.InstrumentationTestCase;

@@ -18,13 +18,14 @@ package com.comoelagua.android.braille.model.daos;
 import android.content.res.Resources;
 import com.comoelagua.android.braille.R;
 
-public class PhrasesDao extends WordsDao {
+public class CharactersDao extends WordsDao {
 
-    public PhrasesDao(Resources res) {
+    public CharactersDao(Resources res) {
         super(res);
     }
 
     public String[] getStringArray() {
-        return res.getStringArray(R.array.phrases);
+        return res.getStringArray(R.array.characters);
     }
+
 }

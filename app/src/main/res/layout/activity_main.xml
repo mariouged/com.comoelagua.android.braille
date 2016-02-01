@@ -19,6 +19,17 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/charactersExercises"
+        android:onClick="openCharactersExercises"
+        android:background="#92c755"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="@string/wordExercises"
         android:onClick="openWordExercises"
         android:background="#92c755"

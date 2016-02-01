@@ -67,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void openCharactersExercises(View view) {
+        startActivity(new Intent(this, CharactersExercisesActivity.class));
+    }
+
     public  void openWordExercises(View view) {
         startActivity(new Intent(this, WordExercisesActivity.class));
     }
