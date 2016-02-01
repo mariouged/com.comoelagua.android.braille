@@ -4,22 +4,29 @@
     <string name="action_settings">Settings</string>
 
     <string name="alphabet">Alfabeto</string>
+    <string name="alphabetDescription">Alfabeto Braille, todo el abecedario</string>
     <string name="exercises">Ejercicios</string>
 
     <string name="characters">Caracteres</string>
+    <string name="charactersExercises">Ejercicios de letras</string>
+    <string name="charactersExercisesDescription">Ejercicios de letras, test de primer nivel, consiste en un test dónde se muestra una letra en Braille y hay que introducir la letra leida</string>
+    <string name="title_activity_characters_exercises">Ejercicios de letras</string>
+
     <string name="title_activity_exercises">Ejercicios</string>
     <string name="ask_label">Pregunta</string>
     <string name="answerDescription">Introduce el texto que has leido arriba</string>
     <string name="next">Siguiente</string>
-    <string name="nextDescription">Pulsa para comprobar y/o continuar</string>
+    <string name="nextDescription">Pulsa para comprobar y continuar</string>
 
     <string name="title_activity_alphabet">Alfabeto</string>
     <string name="wordExercises">Ejercicios de palabras</string>
+    <string name="wordExercisesDescription">Ejercicios de palabras, test de segundo nivel, test de palabras en Braille, debes leer e introducir la palabra</string>
     <string name="title_activity_word_exercises">Ejercicios de palabras</string>
     <string name="word_label">Palabra</string>
     <string name="check">Comprobar</string>
     <string name="result">Resultados</string>
     <string name="phraseExercises">Ejercicios de frases</string>
+    <string name="phraseExercisesDescription">Ejercicios de frases, test de tercer nivel, introduce la frase que has leído en Braille</string>
     <string name="title_activity_phrase_exercises">Ejercicios de frases</string>
     <string name="title_activity_characters">Test caracteres ascii</string>
     <string name="actionHelp">Ayuda</string>
@@ -73,7 +80,5 @@
         \n
         \nVersion 1.1
     </string>
-    <string name="charactersExercises">Ejercicios de letras</string>
-    <string name="title_activity_characters_exercises">Ejercicios de letras</string>
     <string name="phraseExample">El perro de san roque no tiene rabo porque Ramón Ramirez se lo ha cortado</string>
 </resources>
