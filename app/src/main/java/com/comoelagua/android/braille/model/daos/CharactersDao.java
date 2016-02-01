@@ -18,6 +18,10 @@ package com.comoelagua.android.braille.model.daos;
 import android.content.res.Resources;
 import com.comoelagua.android.braille.R;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class CharactersDao extends WordsDao {
 
     public CharactersDao(Resources res) {
@@ -25,7 +29,18 @@ public class CharactersDao extends WordsDao {
     }
 
     public String[] getStringArray() {
-        return res.getStringArray(R.array.characters);
+        List<String> retCharacters = new ArrayList<>();
+        String[] ignore = {"may.","núm.", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+        List<String> ignoreList = Arrays.asList(ignore);
+        String[] characters = res.getStringArray(R.array.characters);
+        for (int i = 0; i < characters.length; i++) {
+            if (ignoreList.contains( characters[i] )) {
+                continue;
+            }
+            retCharacters.add( characters[i] );
+        }
+        String[] charactersCleans = retCharacters.toArray(new String[retCharacters.size()]);
+        return charactersCleans;
     }
 
 }
