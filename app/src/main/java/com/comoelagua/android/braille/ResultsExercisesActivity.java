@@ -51,5 +51,10 @@ public class ResultsExercisesActivity extends AppCompatActivity {
         charactersErrorsList.setAdapter(new CharacterErrorAdapter(this, resultExercise.getCharactersErrorsList()));
     }
 
+    @Override
+    public void onBackPressed() {
+        //super.onBackPressed();
+        finish();
+    }
 
 }

@@ -165,4 +165,5 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         intent.putExtra(RESULT_EXERCISE, resultExercise);
         startActivity(intent);
     }
+
 }
