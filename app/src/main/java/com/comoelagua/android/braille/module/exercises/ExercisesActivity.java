@@ -53,7 +53,6 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
     protected TextView askTextView;
     protected EditText answerEditText;
     protected Button nextButton;
-    protected String wordType;
     protected ArrayList<Word> wordsList;
     protected Word currentWord;
     protected WordCompare wordCompare;
@@ -108,16 +107,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
 
     public abstract void setWordType();
 
-    public void loadWordsList() {
-        // must Override this method
-        if ("phrase".equals(wordType)) {
-            WordsDaoInterface phrasesDao = ((BrailleApplication) getApplicationContext()).getWordsDao(DaosContainer.PHRASES_DAO_TYPE);
-            wordsList = phrasesDao.readRandom( maxSize );
-        } else {
-            WordsDaoInterface wordsDao = ((BrailleApplication) getApplicationContext()).getWordsDao(DaosContainer.WORDS_DAO_TYPE);
-            wordsList = wordsDao.readRandom(maxSize);
-        }
-    }
+    public abstract void loadWordsList();
 
     public void showAsk(Word word) {
         currentWord = word;

@@ -48,6 +48,14 @@
                 android:value="com.comoelagua.android.braille.MainActivity" />
         </activity>
         <activity
+            android:name=".CharactersExercisesActivity"
+            android:label="@string/title_activity_characters_exercises"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.comoelagua.android.braille.MainActivity" />
+        </activity>
+        <activity
             android:name=".CharactersActivity"
             android:label="@string/title_activity_characters"
             android:parentActivityName=".MainActivity"

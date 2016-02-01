@@ -15,6 +15,7 @@
  */
 package com.comoelagua.android.braille;
 
+import com.comoelagua.android.braille.model.beans.ResultExercise;
 import com.comoelagua.android.braille.model.daos.containers.DaosContainer;
 import com.comoelagua.android.braille.model.daos.interfaces.WordsDaoInterface;
 import com.comoelagua.android.braille.module.exercises.ExercisesActivity;
@@ -23,14 +24,13 @@ public class CharactersExercisesActivity extends ExercisesActivity {
 
     @Override
     public void setWordType() {
-        wordType =  "character";
         wordLabel.setText(R.string.character);
-        resultExercise.setWordType("character");
+        resultExercise.setWordType(ResultExercise.CHARACTER_TYPE);
     }
 
     @Override
     public void loadWordsList() {
-        WordsDaoInterface charactersDao = ((BrailleApplication) getApplicationContext()).getWordsDao(DaosContainer.PHRASES_DAO_TYPE);
+        WordsDaoInterface charactersDao = ((BrailleApplication) getApplicationContext()).getWordsDao(DaosContainer.CHARACTERS_DAO_TYPE);
         wordsList = charactersDao.readRandom(maxSize);
     }
 }

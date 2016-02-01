@@ -20,12 +20,16 @@ public class ResultExercise implements Serializable {
     protected Date end;
     protected long bestTimeValue;
 
+    public final static String WORD_TYPE = "word";
+    public final static String PHRASE_TYPE = "phrase";
+    public final static String CHARACTER_TYPE = "character";
+
     public final static String WORD_BEST_TIME_VALUE = "wordBestTimeValue";
     public final static String PHRASE_BEST_TIME_VALUE = "phraseBestTimeValue";
     public final static String CHARACTER_BEST_TIME_VALUE = "characterBestTimeValue";
 
     public ResultExercise() {
-        setWordType("word");
+        setWordType(WORD_TYPE);
         this.okCount = 0;
         this.failCount = 0;
         charactersErrorsList = new ArrayList<>();

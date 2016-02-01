@@ -15,6 +15,7 @@
  */
 package com.comoelagua.android.braille;
 
+import com.comoelagua.android.braille.model.beans.ResultExercise;
 import com.comoelagua.android.braille.model.daos.WordsDao;
 import com.comoelagua.android.braille.model.daos.containers.DaosContainer;
 import com.comoelagua.android.braille.model.daos.interfaces.WordsDaoInterface;
@@ -25,9 +26,8 @@ public class WordExercisesActivity extends ExercisesActivity {
 
     @Override
     public void setWordType() {
-        wordType =  "word";
         wordLabel.setText(R.string.word_label);
-        resultExercise.setWordType(wordType);
+        resultExercise.setWordType(ResultExercise.WORD_TYPE);
     }
 
     @Override

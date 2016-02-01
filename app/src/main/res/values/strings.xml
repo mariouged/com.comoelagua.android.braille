@@ -56,4 +56,5 @@
         \nVersion 1.1
     </string>
     <string name="charactersExercises">Ejercicios de letras</string>
+    <string name="title_activity_characters_exercises">Ejercicios de letras</string>
 </resources>
