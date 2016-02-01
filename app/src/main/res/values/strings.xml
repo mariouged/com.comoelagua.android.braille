@@ -9,8 +9,9 @@
     <string name="characters">Caracteres</string>
     <string name="title_activity_exercises">Ejercicios</string>
     <string name="ask_label">Pregunta</string>
-
+    <string name="answerDescription">Introduce el texto que has leido arriba</string>
     <string name="next">Siguiente</string>
+    <string name="nextDescription">Pulsa para comprobar y/o continuar</string>
 
     <string name="title_activity_alphabet">Alfabeto</string>
     <string name="wordExercises">Ejercicios de palabras</string>
@@ -57,4 +58,5 @@
     </string>
     <string name="charactersExercises">Ejercicios de letras</string>
     <string name="title_activity_characters_exercises">Ejercicios de letras</string>
+    <string name="phraseExample">El perro de san roque no tiene rabo porque Ramón Ramirez se lo ha cortado</string>
 </resources>

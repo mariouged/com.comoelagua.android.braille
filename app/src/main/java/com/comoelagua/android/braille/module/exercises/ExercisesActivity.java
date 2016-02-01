@@ -68,7 +68,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_word_exercises);
+        setContentView( getContentView() );
 
         wordLabel = (TextView) findViewById(R.id.wordLabel);
         askNumberTextView = (TextView) findViewById(R.id.askNumber);
@@ -108,6 +108,10 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
     public abstract void setWordType();
 
     public abstract void loadWordsList();
+
+    public int getContentView() {
+        return R.layout.activity_word_exercises;
+    }
 
     public void showAsk(Word word) {
         currentWord = word;

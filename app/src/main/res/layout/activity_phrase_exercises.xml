@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.comoelagua.android.braille.WordExercisesActivity">
+    tools:context="com.comoelagua.android.braille.PhraseExercisesActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,24 +25,34 @@
     <TextView android:id="@+id/ask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="@string/phraseExample"
+        android:lines="3"
         android:scrollbars="vertical"
         android:textColor="#000000"
         android:textSize="48dp" />
 
-    <EditText android:id="@+id/answer"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:textSize="36dp"
-        android:contentDescription="@string/answerDescription" />
+        android:orientation="horizontal">
 
-    <Button android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:background="@color/nextButton"
-        android:text="@string/next"
-        android:contentDescription="@string/nextDescription"
-        android:onClick="nextAsk" />
+        <EditText android:id="@+id/answer"
+            android:layout_width="241dp"
+            android:layout_height="122dp"
+            android:textColor="#000000"
+            android:textSize="36dp"
+            android:contentDescription="@string/answerDescription"
+            android:scrollbars="vertical"
+            android:width="300dp" />
+
+        <Button android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@color/nextButton"
+            android:text="@string/next"
+            android:contentDescription="@string/nextDescription"
+            android:onClick="nextAsk" />
+    </LinearLayout>
 
 </LinearLayout>
