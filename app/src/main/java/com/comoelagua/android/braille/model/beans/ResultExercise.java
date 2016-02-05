@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.sql.Time;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -56,7 +57,20 @@ public class ResultExercise implements Serializable {
     }
 
     public void addAllcharactersErrorsList(List charactersErrorsList) {
-        this.charactersErrorsList.addAll(charactersErrorsList);
+        for (Object item : charactersErrorsList) {
+            String characterError = (String) item;
+            boolean duplicate = false;
+            for (String previous : this.charactersErrorsList) {
+                if (previous.equals(characterError)) {
+                    duplicate = true;
+                    break;
+                }
+            }
+            if (!duplicate) {
+                this.charactersErrorsList.add(characterError);
+            }
+        }
+        //this.charactersErrorsList.addAll(charactersErrorsList);
     }
 
     public List<String> getCharactersErrorsList() {

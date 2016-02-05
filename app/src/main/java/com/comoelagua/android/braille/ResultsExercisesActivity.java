@@ -47,6 +47,10 @@ public class ResultsExercisesActivity extends AppCompatActivity {
         timeValueTextView.setText("" + Math.round(resultExercise.getTime() / 1000));
         TextView bestTimeValueTextView = (TextView) findViewById(R.id.bestTimeValue);
         bestTimeValueTextView.setText("" + Math.round(resultExercise.getBestTimeValue() / 1000));
+        if (resultExercise.getFailCount() == 0) {
+            TextView reviewTextView = (TextView) findViewById(R.id.review);
+            reviewTextView.setText(R.string.resulNoErrors);
+        }
         ListView charactersErrorsList = (ListView) findViewById(R.id.charactersErrorsList);
         charactersErrorsList.setAdapter(new CharacterErrorAdapter(this, resultExercise.getCharactersErrorsList()));
     }

@@ -35,6 +35,7 @@
     <string name="okLabel">Correctas</string>
     <string name="failLabel">Falladas</string>
     <string name="review">Repasar los siguientes caracteres</string>
+    <string name="resulNoErrors">No has cometido ningún fallo, pasa al siguiente nivel</string>
     <string name="testFont">test font</string>
     <string name="sdk_dialog_message">Versión de android no soportada</string>
     <string name="sdk_dialog_title">API version</string>
