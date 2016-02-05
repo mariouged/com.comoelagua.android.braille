@@ -30,7 +30,7 @@ public class CharactersDao extends WordsDao {
 
     public String[] getStringArray() {
         List<String> retCharacters = new ArrayList<>();
-        String[] ignore = {"may.","núm.", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0"};
+        String[] ignore = res.getStringArray(R.array.charactersIgnore);
         List<String> ignoreList = Arrays.asList(ignore);
         String[] characters = res.getStringArray(R.array.characters);
         for (int i = 0; i < characters.length; i++) {

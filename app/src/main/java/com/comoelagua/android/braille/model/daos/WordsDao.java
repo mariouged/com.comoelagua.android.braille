@@ -7,6 +7,7 @@ import com.comoelagua.android.braille.model.beans.Word;
 import com.comoelagua.android.braille.model.daos.interfaces.WordsDaoInterface;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class WordsDao implements WordsDaoInterface {
 
@@ -20,11 +21,23 @@ public class WordsDao implements WordsDaoInterface {
     public ArrayList<Word> readRandom(int length) {
         ArrayList<Word> wordsList = readAll();
         ArrayList<Word> randomWordsList = new ArrayList<Word>();
+        int size = wordsList.size();
+        HashSet<Integer> randomsNums = new HashSet<>(size);
         for(int i = 0; i < length; i++) {
-            int randomNum = (int) (Math.random() * wordsList.size() );
+
+            int randomNum = getRandom(size);
+            while (randomsNums.contains(new Integer(randomNum))) {
+                randomNum = getRandom(size);
+            }
+            randomsNums.add(new Integer(randomNum));
+
             randomWordsList.add( wordsList.get(randomNum) );
         }
         return randomWordsList;
+    }
+
+    protected int getRandom(int size) {
+        return (int) (Math.random() * size);
     }
 
     public ArrayList<Word> readAll() {

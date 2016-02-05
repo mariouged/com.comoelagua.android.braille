@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="brailleCharacters">
+    <string-array name="charactersBraille">
         <item>a</item>
         <item>á</item>
         <item>b</item>

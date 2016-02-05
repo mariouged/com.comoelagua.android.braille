@@ -21,7 +21,7 @@ public class AlphabetAdapter extends BaseAdapter {
         context = c;
         Resources res = context.getResources();
         characters = res.getStringArray(R.array.characters);
-        brailleCharacters = res.getStringArray(R.array.brailleCharacters);
+        brailleCharacters = res.getStringArray(R.array.charactersBraille);
     }
 
     @Override
