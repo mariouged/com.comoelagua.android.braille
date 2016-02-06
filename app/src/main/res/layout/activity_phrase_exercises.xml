@@ -24,13 +24,11 @@
 
     <TextView android:id="@+id/ask"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="170dp"
         android:text="@string/phraseExample"
-        android:scrollbars="vertical"
-        android:lines="3"
         android:textColor="#000000"
         android:textSize="48dp"
-        android:minLines="3"
+        android:scrollbars="vertical"
         android:maxLines="6" />
 
     <LinearLayout

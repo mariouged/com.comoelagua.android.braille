@@ -22,6 +22,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
+import android.text.method.ScrollingMovementMethod;
 import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -68,11 +69,12 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView( getContentView() );
+        setContentView(getContentView());
 
         wordLabel = (TextView) findViewById(R.id.wordLabel);
         askNumberTextView = (TextView) findViewById(R.id.askNumber);
         askTextView = (TextView) findViewById(R.id.ask);
+        askTextView.setMovementMethod(new ScrollingMovementMethod());
         answerEditText = (EditText) findViewById(R.id.answer);
         nextButton = (Button) findViewById(R.id.next);
 
