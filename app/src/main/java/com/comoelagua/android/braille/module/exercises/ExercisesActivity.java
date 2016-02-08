@@ -114,7 +114,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         askNumberTextView.setText(" " + (1 + askNumber) );
         askTextView.setText(word.getWord());
         answerEditText.setText("");
-        nextButton.setBackgroundColor(getResources().getColor(R.color.nextButton));
+        nextButton.setBackgroundResource(R.color.nextButton);
     }
 
     public void nextAsk(View view) {
@@ -152,7 +152,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
             answerSpannable.setSpan( new ForegroundColorSpan(Color.RED), positionError.intValue(), 1 + positionError.intValue(), Spannable.SPAN_COMPOSING);
         }
         resultExercise.addAllcharactersErrorsList(wordCompare.getCharactersErrorsList());
-        nextButton.setBackgroundColor(getResources().getColor(R.color.nextButtonFail));
+        nextButton.setBackgroundResource(R.color.nextButtonFail);
     }
 
     public void showResult() {
