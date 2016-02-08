@@ -18,7 +18,6 @@ package com.comoelagua.android.braille.module.exercises;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
@@ -32,17 +31,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.comoelagua.android.braille.AlphabetActivity;
-import com.comoelagua.android.braille.BrailleApplication;
-import com.comoelagua.android.braille.MainActivity;
 import com.comoelagua.android.braille.R;
 import com.comoelagua.android.braille.ResultsExercisesActivity;
 import com.comoelagua.android.braille.model.beans.ResultExercise;
 import com.comoelagua.android.braille.model.beans.Word;
 import com.comoelagua.android.braille.model.beans.actions.WordCompare;
-import com.comoelagua.android.braille.model.daos.PhrasesDao;
-import com.comoelagua.android.braille.model.daos.WordsDao;
-import com.comoelagua.android.braille.model.daos.containers.DaosContainer;
-import com.comoelagua.android.braille.model.daos.interfaces.WordsDaoInterface;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -74,7 +67,6 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         wordLabel = (TextView) findViewById(R.id.wordLabel);
         askNumberTextView = (TextView) findViewById(R.id.askNumber);
         askTextView = (TextView) findViewById(R.id.ask);
-        askTextView.setMovementMethod(new ScrollingMovementMethod());
         answerEditText = (EditText) findViewById(R.id.answer);
         nextButton = (Button) findViewById(R.id.next);
 
