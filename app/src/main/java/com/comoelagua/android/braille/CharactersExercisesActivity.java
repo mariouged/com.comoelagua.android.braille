@@ -23,6 +23,11 @@ import com.comoelagua.android.braille.module.exercises.ExercisesActivity;
 public class CharactersExercisesActivity extends ExercisesActivity {
 
     @Override
+    public int getContentView() {
+        return R.layout.activity_character_exercises;
+    }
+
+    @Override
     public void setWordType() {
         wordLabel.setText(R.string.character);
         resultExercise.setWordType(ResultExercise.CHARACTER_TYPE);
