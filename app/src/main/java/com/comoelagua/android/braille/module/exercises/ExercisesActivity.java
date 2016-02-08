@@ -38,6 +38,7 @@ import com.comoelagua.android.braille.ResultsExercisesActivity;
 import com.comoelagua.android.braille.model.beans.ResultExercise;
 import com.comoelagua.android.braille.model.beans.Word;
 import com.comoelagua.android.braille.model.beans.actions.WordCompare;
+import com.comoelagua.android.braille.module.exercises.listener.AnswerOnEditorActionListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -70,7 +71,8 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         askNumberTextView = (TextView) findViewById(R.id.askNumber);
         askTextView = (TextView) findViewById(R.id.ask);
         answerEditText = (EditText) findViewById(R.id.answer);
-        answerEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+        answerEditText.setOnEditorActionListener(new AnswerOnEditorActionListener(this));
+        /*answerEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 boolean handled = false;
@@ -80,7 +82,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
                 }
                 return handled;
             }
-        });
+        });*/
 
         nextButton = (Button) findViewById(R.id.next);
 
