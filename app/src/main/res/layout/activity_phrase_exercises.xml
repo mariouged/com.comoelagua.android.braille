@@ -52,7 +52,9 @@
             android:textSize="36dp"
             android:contentDescription="@string/answerDescription"
             android:scrollbars="vertical"
-            android:width="300dp" />
+            android:width="300dp"
+            android:inputType="text"
+            android:imeOptions="actionNext" />
 
         <Button android:id="@+id/next"
             android:layout_width="wrap_content"

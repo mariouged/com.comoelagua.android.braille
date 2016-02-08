@@ -84,7 +84,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
 
         nextButton = (Button) findViewById(R.id.next);
 
-        Typeface typeFace = Typeface.createFromAsset(getAssets(), "fonts/Braille6-ANSI.ttf");
+        Typeface typeFace = Typeface.createFromAsset(getAssets(), getString(R.string.brailleFont));
         askTextView.setTypeface(typeFace);
 
         wordCompare = new WordCompare();
