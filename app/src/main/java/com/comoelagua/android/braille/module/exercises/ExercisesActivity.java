@@ -23,9 +23,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
 import android.text.method.ScrollingMovementMethod;
 import android.text.style.ForegroundColorSpan;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -68,6 +70,18 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         askNumberTextView = (TextView) findViewById(R.id.askNumber);
         askTextView = (TextView) findViewById(R.id.ask);
         answerEditText = (EditText) findViewById(R.id.answer);
+        answerEditText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+                boolean handled = false;
+                if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                    nextAsk(v);
+                    handled = true;
+                }
+                return handled;
+            }
+        });
+
         nextButton = (Button) findViewById(R.id.next);
 
         Typeface typeFace = Typeface.createFromAsset(getAssets(), "fonts/Braille6-ANSI.ttf");
