@@ -431,7 +431,6 @@
         <item>población</item>
         <item>empresas</item>
         <item>estudio</item>
-        <item>salud</item>
         <item>servicios</item>
         <item>haya</item>
         <item>principio</item>
@@ -501,7 +500,70 @@
         <item>organización</item>
         <item>nuevas</item>
         <item>calidad</item>
-        <item>pingüe</item>
+        <item>pingüino</item>
         <item>piropos</item>
+        <item>bienvenido</item>
+        <item>adiós</item>
+        <item>izquierda</item>
+        <item>derecha</item>
+        <item>perdone</item>
+        <item>oiga</item>
+        <item>disculpe</item>
+        <item>señor</item>
+        <item>señora</item>
+        <item>señorita</item>
+        <item>amable</item>
+        <item>feliz</item>
+        <item>felicidades</item>
+        <item>salud</item>
+        <item>cumpleaños</item>
+        <item>navidad</item>
+        <item>malo</item>
+        <item>pequeño</item>
+        <item>grande</item>
+        <item>no</item>
+        <item>gusta</item>
+        <item>mira</item>
+        <item>hambre</item>
+        <item>sed</item>
+        <item>eso</item>
+        <item>dónde</item>
+        <item>dame</item>
+        <item>toma</item>
+        <item>queso</item>
+        <item>tomate</item>
+        <item>lechuga</item>
+        <item>hamburguesa</item>
+        <item>pasta</item>
+        <item>bocadillo</item>
+        <item>sándwich</item>
+        <item>arroz</item>
+        <item>judias</item>
+        <item>limón</item>
+        <item>vegetariano</item>
+        <item>vegano</item>
+        <item>sal</item>
+        <item>tenedor</item>
+        <item>cuchillo</item>
+        <item>cuchara</item>
+        <item>saludos</item>
+        <item>hola</item>
+        <item>doctor</item>
+        <item>profesor</item>
+        <item>abogado</item>
+        <item>hija</item>
+        <item>vender</item>
+        <item>comprar</item>
+        <item>háblame</item>
+        <item>llámame</item>
+        <item>prestar</item>
+        <item>anímate</item>
+        <item>Cálmate</item>
+        <item>Corpulento</item>
+        <item>Delgaducho</item>
+        <item>Escuálido</item>
+        <item>mojarse</item>
+        <item>spaguetti</item>
+        <item>Sírvete</item>
     </string-array>
 </resources>
