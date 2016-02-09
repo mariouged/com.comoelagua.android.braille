@@ -15,27 +15,20 @@
  */
 package com.comoelagua.android.braille.module.exercises.listener;
 
-import android.view.KeyEvent;
-import android.view.inputmethod.EditorInfo;
-import android.widget.TextView;
+import android.view.View;
 
 import com.comoelagua.android.braille.module.exercises.ExercisesActivity;
 
-public class AnswerOnEditorActionListener implements TextView.OnEditorActionListener {
+public class NextAskOnClickListener implements View.OnClickListener {
 
     protected ExercisesActivity activity;
 
-    public AnswerOnEditorActionListener(ExercisesActivity activity) {
+    public NextAskOnClickListener(ExercisesActivity activity) {
         this.activity = activity;
     }
 
     @Override
-    public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-        boolean handled = false;
-        if (actionId == EditorInfo.IME_ACTION_NEXT) {
-            activity.nextAsk();
-            handled = true;
-        }
-        return handled;
+    public void onClick(View v) {
+        activity.nextAsk();
     }
 }

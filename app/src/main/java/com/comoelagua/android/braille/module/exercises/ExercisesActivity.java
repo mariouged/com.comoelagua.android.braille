@@ -36,6 +36,7 @@ import com.comoelagua.android.braille.model.beans.ResultExercise;
 import com.comoelagua.android.braille.model.beans.Word;
 import com.comoelagua.android.braille.model.beans.actions.WordCompare;
 import com.comoelagua.android.braille.module.exercises.listener.AnswerOnEditorActionListener;
+import com.comoelagua.android.braille.module.exercises.listener.NextAskOnClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -71,6 +72,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         answerEditText.setOnEditorActionListener(new AnswerOnEditorActionListener(this));
 
         nextButton = (Button) findViewById(R.id.next);
+        nextButton.setOnClickListener(new NextAskOnClickListener(this));
 
         Typeface typeFace = Typeface.createFromAsset(getAssets(), getString(R.string.brailleFont));
         askTextView.setTypeface(typeFace);
@@ -117,25 +119,25 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         nextButton.setBackgroundResource(R.color.nextButton);
     }
 
-    public void nextAsk(View view) {
+    public void nextAsk() {
         if (hasError) { // need two click to continue, first to check, second to continue
             hasError = false;
-            continueAsk(view);
+            continueAsk();
             return;
         }
         String answer = answerEditText.getText().toString();
         if (wordCompare.checkEquals(currentWord.getWord(), answer)) {
             ok++;
-            continueAsk(view);
+            continueAsk();
             return;
         }
 
         fail++;
         hasError = true;
-        answerFail(view);
+        answerFail();
     }
 
-    public void continueAsk(View view) {
+    public void continueAsk() {
         askNumber++;
         if (askNumber >= wordsList.size()) {
             showResult();
@@ -145,7 +147,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         showAsk(wordsList.get(askNumber));
     }
 
-    public void answerFail(View view) {
+    public void answerFail() {
         List<Integer> positionsErrorsList = wordCompare.getPositionsErrorsList();
         Spannable answerSpannable = (Spannable) answerEditText.getText();
         for(Integer positionError : positionsErrorsList) {

@@ -25,13 +25,15 @@ public interface ExercisesInterface {
 
     void loadWordsList();
 
+    int getContentView();
+
     void showAsk(Word word);
 
-    void nextAsk(View view);
+    void nextAsk();
 
-    void continueAsk(View view);
+    void continueAsk();
 
-    void answerFail(View view);
+    void answerFail();
 
     void showResult();
 }

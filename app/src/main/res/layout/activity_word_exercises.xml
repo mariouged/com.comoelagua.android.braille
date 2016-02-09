@@ -44,7 +44,6 @@
         android:layout_gravity="right"
         android:background="@color/nextButton"
         android:text="@string/next"
-        android:contentDescription="@string/nextDescription"
-        android:onClick="nextAsk" />
+        android:contentDescription="@string/nextDescription" />
 
 </LinearLayout>
