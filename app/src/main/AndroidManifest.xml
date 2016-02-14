@@ -4,9 +4,8 @@
     package="com.comoelagua.android.braille">
 
     <uses-sdk
-        android:minSdkVersion="18"
-        android:targetSdkVersion="23"
-        tools:overrideLibrary="android.support.test.uiautomator.v18" />
+        android:minSdkVersion="10"
+        android:targetSdkVersion="23" />
 
     <application
         android:name=".BrailleApplication"
