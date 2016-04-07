@@ -116,6 +116,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         askNumberTextView.setText(" " + (1 + askNumber) );
         askTextView.setText(word.getWord());
         answerEditText.setText("");
+        //answerEditText.setEnabled(true);
         nextButton.setBackgroundResource(R.color.nextButton);
     }
 
@@ -155,6 +156,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         }
         resultExercise.addAllcharactersErrorsList(wordCompare.getCharactersErrorsList());
         nextButton.setBackgroundResource(R.color.nextButtonFail);
+        //answerEditText.setEnabled(false); // on disabled EditText red char no show, all text color : grey
     }
 
     public void showResult() {
