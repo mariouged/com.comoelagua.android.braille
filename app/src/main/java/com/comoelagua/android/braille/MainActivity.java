@@ -75,12 +75,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, WordExercisesActivity.class));
     }
 
+    public void openNumbersExercises(View view) {
+        startActivity(new Intent(this, NumbersExercisesActivity.class));
+    }
+
     public void openPhraseExercises(View view) {
         startActivity(new Intent(this, PhraseExercisesActivity.class));
     }
 
     public boolean checkSdk() {
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.GINGERBREAD) {
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setMessage(R.string.sdk_dialog_message)
                     .setTitle(R.string.sdk_dialog_title);

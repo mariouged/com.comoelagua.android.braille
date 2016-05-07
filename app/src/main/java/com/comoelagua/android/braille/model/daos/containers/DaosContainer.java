@@ -18,6 +18,7 @@ package com.comoelagua.android.braille.model.daos.containers;
 import android.content.res.Resources;
 
 import com.comoelagua.android.braille.model.daos.CharactersDao;
+import com.comoelagua.android.braille.model.daos.NumbersDao;
 import com.comoelagua.android.braille.model.daos.PhrasesDao;
 import com.comoelagua.android.braille.model.daos.WordsDao;
 import com.comoelagua.android.braille.model.daos.interfaces.WordsDaoInterface;
@@ -31,6 +32,7 @@ public class DaosContainer {
     public static final String WORDS_DAO_TYPE = "words";
     public static final String PHRASES_DAO_TYPE = "phrases";
     public static final String CHARACTERS_DAO_TYPE = "characters";
+    public static final String NUMBERS_DAO_TYPE = "numbers";
 
     protected Hashtable<String, WordsDaoInterface> daosHastable;
 
@@ -56,6 +58,8 @@ public class DaosContainer {
             return new WordsDao(res);
         } else if (PHRASES_DAO_TYPE.equals(type)) {
             return new PhrasesDao(res);
+        } else if (NUMBERS_DAO_TYPE.equals(type)) {
+            return new NumbersDao(res);
         }
         return null;
     }

@@ -7,6 +7,10 @@
         android:minSdkVersion="10"
         android:targetSdkVersion="23" />
 
+    <android:uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <android:uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <android:uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name=".BrailleApplication"
         android:allowBackup="true"
@@ -74,6 +78,14 @@
         <activity
             android:name=".HelpActivity"
             android:label="@string/title_activity_help"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.comoelagua.android.braille.MainActivity" />
+        </activity>
+        <activity
+            android:name=".NumbersExercisesActivity"
+            android:label="@string/title_activity_numbers_exercises"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
