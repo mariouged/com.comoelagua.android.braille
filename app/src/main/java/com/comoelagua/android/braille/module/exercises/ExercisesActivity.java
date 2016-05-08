@@ -107,6 +107,8 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
 
     public abstract void loadWordsList();
 
+    public Word getCurrentWord() { return currentWord; }
+
     public int getContentView() {
         return R.layout.activity_word_exercises;
     }
