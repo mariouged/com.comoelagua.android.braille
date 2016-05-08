@@ -15,15 +15,15 @@
  */
 package com.comoelagua.android.braille.model.daos.interfaces;
 
-import com.comoelagua.android.braille.model.beans.Word;
+import com.comoelagua.android.braille.model.beans.interfaces.WordInterface;
 
 import java.util.ArrayList;
 
 public interface WordsDaoInterface {
 
-    ArrayList<Word> readRandom(int length);
+    ArrayList<WordInterface> readRandom(int length);
 
-    ArrayList<Word> readAll();
+    ArrayList<WordInterface> readAll();
 
     String[] getStringArray();
 }

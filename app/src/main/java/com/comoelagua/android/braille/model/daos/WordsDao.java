@@ -4,6 +4,7 @@ import android.content.res.Resources;
 
 import com.comoelagua.android.braille.R;
 import com.comoelagua.android.braille.model.beans.Word;
+import com.comoelagua.android.braille.model.beans.interfaces.WordInterface;
 import com.comoelagua.android.braille.model.daos.interfaces.WordsDaoInterface;
 
 import java.util.ArrayList;
@@ -18,9 +19,9 @@ public class WordsDao implements WordsDaoInterface {
         this.res = res;
     }
 
-    public ArrayList<Word> readRandom(int length) {
-        ArrayList<Word> wordsList = readAll();
-        ArrayList<Word> randomWordsList = new ArrayList<Word>();
+    public ArrayList<WordInterface> readRandom(int length) {
+        ArrayList<WordInterface> wordsList = readAll();
+        ArrayList<WordInterface> randomWordsList = new ArrayList<>();
         int size = wordsList.size();
         HashSet<Integer> randomsNums = new HashSet<>(size);
         for(int i = 0; i < length; i++) {
@@ -40,14 +41,16 @@ public class WordsDao implements WordsDaoInterface {
         return (int) (Math.random() * size);
     }
 
-    public ArrayList<Word> readAll() {
+    public ArrayList<WordInterface> readAll() {
         if (wordsListAll != null) {
             return wordsListAll;
         }
-        ArrayList wordsListAll = new ArrayList<Word>();
+        ArrayList wordsListAll = new ArrayList<>();
         String[] wordsArray = getStringArray();
         for (int i = 0; i < wordsArray.length; i++) {
-            wordsListAll.add( new Word(1 + i, wordsArray[i]) );
+            WordInterface word = new Word();
+            word.setId(1 + i).setWord(wordsArray[i]);
+            wordsListAll.add( word );
         }
 
         return wordsListAll;

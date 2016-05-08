@@ -24,7 +24,6 @@ import android.text.Spannable;
 import android.text.style.ForegroundColorSpan;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -33,8 +32,8 @@ import com.comoelagua.android.braille.AlphabetActivity;
 import com.comoelagua.android.braille.R;
 import com.comoelagua.android.braille.ResultsExercisesActivity;
 import com.comoelagua.android.braille.model.beans.ResultExercise;
-import com.comoelagua.android.braille.model.beans.Word;
 import com.comoelagua.android.braille.model.beans.actions.WordCompare;
+import com.comoelagua.android.braille.model.beans.interfaces.WordInterface;
 import com.comoelagua.android.braille.module.exercises.listener.AnswerOnEditorActionListener;
 import com.comoelagua.android.braille.module.exercises.listener.NextAskOnClickListener;
 
@@ -48,8 +47,8 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
     protected TextView askTextView;
     protected EditText answerEditText;
     protected Button nextButton;
-    protected ArrayList<Word> wordsList;
-    protected Word currentWord;
+    protected ArrayList<WordInterface> wordsList;
+    protected WordInterface currentWord;
     protected WordCompare wordCompare;
     protected int askNumber = 0;
     protected int maxSize = 10;
@@ -107,16 +106,16 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
 
     public abstract void loadWordsList();
 
-    public Word getCurrentWord() { return currentWord; }
+    public WordInterface getCurrentWord() { return currentWord; }
 
     public int getContentView() {
         return R.layout.activity_word_exercises;
     }
 
-    public void showAsk(Word word) {
+    public void showAsk(WordInterface word) {
         currentWord = word;
         askNumberTextView.setText(" " + (1 + askNumber) );
-        askTextView.setText(word.getWord());
+        askTextView.setText(word.getWordToView());
         answerEditText.setText("");
         //answerEditText.setEnabled(true);
         nextButton.setBackgroundResource(R.color.nextButton);
@@ -129,7 +128,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
             return;
         }
         String answer = answerEditText.getText().toString();
-        if (wordCompare.checkEquals(currentWord.getWord(), answer)) {
+        if (wordCompare.checkEquals(currentWord.getWordToCompare(), answer)) {
             ok++;
             continueAsk();
             return;

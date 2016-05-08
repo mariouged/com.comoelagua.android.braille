@@ -33,21 +33,4 @@ public class NumbersExercisesActivity extends ExercisesActivity {
         wordsList = numbersDao.readRandom(maxSize);
     }
 
-    public void showAsk(Word word) {
-        super.showAsk(word);
-
-        Resources res = getResources();
-        String[] numbersArray = res.getStringArray(R.array.numbers);
-        String[] numbersBraille = res.getStringArray(R.array.numbersBraille);
-        String w = word.getWord();
-        String askReFormat = "";
-        for (int i = 0; i < numbersArray.length; i++) {
-            if (w.equals(numbersArray[i])) {
-                askReFormat = numbersBraille[i];
-                break;
-            }
-        }
-        askTextView.setText(askReFormat);
-
-    }
 }

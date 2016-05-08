@@ -69,6 +69,9 @@
         Con los ejercicios de palabras terminarás de aprender el alfabeto.
         Para el nivel más avanzado haz ejercicios de frases.
         \n
+        \nTambién hay ejercicios de números, los números del 1 al 0, coinciden con las letras de la a hasta la j.
+        \nPero llevan delante el signo 3 4 5 6.
+        \n
         \n
         \nLamentandolo mucho sólo sirve para que aprendan videntes: profesores, amigos, familiares, ...
         \nLa aplicación es accesible, con descripciones para los textos, botones, ...
@@ -89,10 +92,12 @@
         \nPuedes usarla en cualquier momento
         , no necesita conexión a internet por lo que no te consumirá datos.
         \n
-        \nVersion 1.3
+        \nVersion 1.5
     </string>
     <string name="phraseExample">El perro de san roque no tiene rabo porque Ramón Ramirez se lo ha cortado</string>
     <string name="title_activity_numbers_exercises">Ejercicios de números</string>
     <string name="numbersExercises">Ejercicios de números</string>
     <string name="numbersExercisesDescription">Ejercicios de números, otro test de primer nivel, consiste en un ejercicio dónde se muestra un número en Braille y hay que introducir el número leído</string>
+    <string name="number_label">Número</string>
+    <string name="answerNumberDescription">Introduce el número que has leido arriba</string>
 </resources>

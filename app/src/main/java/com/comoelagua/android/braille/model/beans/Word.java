@@ -1,32 +1,14 @@
 package com.comoelagua.android.braille.model.beans;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.comoelagua.android.braille.model.beans.interfaces.WordInterface;
 
-public class Word {
+public class Word extends WordAbstract {
 
-    protected int id;
-    protected String word;
+    public Word() {}
 
-    public Word(int id, String word) {
-        this.id = id;
-        setWord(word);
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getWord() {
-        return word;
-    }
-
-    public void setWord(String word) {
+    public WordInterface setWord(String word) {
         this.word = word.toLowerCase();
+        return this;
     }
 
 }

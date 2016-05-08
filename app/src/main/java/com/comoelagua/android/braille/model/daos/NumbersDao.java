@@ -18,6 +18,10 @@ package com.comoelagua.android.braille.model.daos;
 import android.content.res.Resources;
 
 import com.comoelagua.android.braille.R;
+import com.comoelagua.android.braille.model.beans.Number;
+import com.comoelagua.android.braille.model.beans.interfaces.WordInterface;
+
+import java.util.ArrayList;
 
 public class NumbersDao extends WordsDao {
 
@@ -25,6 +29,23 @@ public class NumbersDao extends WordsDao {
 
     public String[] getStringArray() {
         return res.getStringArray(R.array.numbers);
+    }
+
+    public ArrayList<WordInterface> readAll() {
+        if (wordsListAll != null) {
+            return wordsListAll;
+        }
+        ArrayList wordsListAll = new ArrayList<>();
+        String[] numbersBraille = res.getStringArray(R.array.numbersBraille);
+        String[] wordsArray = getStringArray();
+        for (int i = 0; i < wordsArray.length; i++) {
+            WordInterface word = new Number();
+            word.setId(1 + i).setWord(wordsArray[i])
+                    .setWordToView(numbersBraille[i]);
+            wordsListAll.add( word );
+        }
+
+        return wordsListAll;
     }
 
 }
