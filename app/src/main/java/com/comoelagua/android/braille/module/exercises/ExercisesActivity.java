@@ -119,6 +119,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         answerEditText.setText("");
         //answerEditText.setEnabled(true);
         nextButton.setBackgroundResource(R.color.nextButton);
+        nextButton.setText(R.string.next);
     }
 
     public void nextAsk() {
@@ -158,6 +159,7 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         resultExercise.addAllcharactersErrorsList(wordCompare.getCharactersErrorsList());
         nextButton.setBackgroundResource(R.color.nextButtonFail);
         //answerEditText.setEnabled(false); // on disabled EditText red char no show, all text color : grey
+        nextButton.setText(R.string.nextContinue);
     }
 
     public void showResult() {
