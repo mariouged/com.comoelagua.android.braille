@@ -22,6 +22,7 @@ import com.comoelagua.android.braille.model.beans.Number;
 import com.comoelagua.android.braille.model.beans.interfaces.WordInterface;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 public class NumbersDao extends WordsDao {
 
@@ -48,4 +49,31 @@ public class NumbersDao extends WordsDao {
         return wordsListAll;
     }
 
+    public String numberToBraille(String s) {
+        String[] numbersBraille = res.getStringArray(R.array.numbersBraille);
+        String[] wordsArray = getStringArray();
+        for (int i = 0; i < wordsArray.length; i++) {
+            String numberStr = wordsArray[i];
+            if (s.equals(numberStr)) {
+                return numbersBraille[i];
+            }
+        }
+        return s; // error
+    }
+
+    public Hashtable<String, String> getHashConverter() {
+        Hashtable<String, String> hashConverter
+                = new Hashtable<String, String>();
+        hashConverter.put("1", "#a");
+        hashConverter.put("2", "#b");
+        hashConverter.put("3", "#c");
+        hashConverter.put("4", "#d");
+        hashConverter.put("5", "#e");
+        hashConverter.put("6", "#f");
+        hashConverter.put("7", "#g");
+        hashConverter.put("8", "#h");
+        hashConverter.put("9", "#i");
+        hashConverter.put("0", "#j");
+        return hashConverter;
+    }
 }

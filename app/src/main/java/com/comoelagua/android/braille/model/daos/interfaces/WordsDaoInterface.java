@@ -18,6 +18,7 @@ package com.comoelagua.android.braille.model.daos.interfaces;
 import com.comoelagua.android.braille.model.beans.interfaces.WordInterface;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 public interface WordsDaoInterface {
 
@@ -26,4 +27,6 @@ public interface WordsDaoInterface {
     ArrayList<WordInterface> readAll();
 
     String[] getStringArray();
+
+    Hashtable<String, String> getHashConverter();
 }

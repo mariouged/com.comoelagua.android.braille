@@ -8,14 +8,19 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.comoelagua.android.braille.BrailleApplication;
 import com.comoelagua.android.braille.R;
+import com.comoelagua.android.braille.model.daos.containers.DaosContainer;
+import com.comoelagua.android.braille.model.daos.interfaces.WordsDaoInterface;
 
+import java.util.Hashtable;
 import java.util.List;
 
 public class CharacterErrorAdapter extends BaseAdapter {
 
     private Context context;
     protected List<String> charactersErrorsList;
+    protected Hashtable<String, String> hashConverter;
 
     public CharacterErrorAdapter(Context c, List charactersErrorsList) {
         context = c;
@@ -47,11 +52,41 @@ public class CharacterErrorAdapter extends BaseAdapter {
         characterTextView.setText(charactersErrorsList.get(position));
 
         TextView brailleTextView = (TextView) rowView.findViewById(R.id.brailleTextView);
-        brailleTextView.setText(charactersErrorsList.get(position));
+        String charError = charactersErrorsList.get(position);
+        if (isInteger(charError)) {
+            charError = numberToBraille(charError);
+        }
+        brailleTextView.setText(charError);
 
         Typeface typeFace = Typeface.createFromAsset(context.getAssets(), context.getString(R.string.brailleFont));
         brailleTextView.setTypeface(typeFace);
 
         return rowView;
     }
+
+    public static boolean isInteger(String s) {
+        return isInteger(s,10);
+    }
+
+    public static boolean isInteger(String s, int radix) {
+        if(s.isEmpty()) return false;
+        for(int i = 0; i < s.length(); i++) {
+            if(i == 0 && s.charAt(i) == '-') {
+                if(s.length() == 1) return false;
+                else continue;
+            }
+            if(Character.digit(s.charAt(i),radix) < 0) return false;
+        }
+        return true;
+    }
+
+    protected String numberToBraille(String s) {
+        if (hashConverter == null || hashConverter.size() == 0) {
+            WordsDaoInterface numbersDao = ((BrailleApplication) context.getApplicationContext()).getWordsDao(DaosContainer.NUMBERS_DAO_TYPE);
+            hashConverter = numbersDao.getHashConverter();
+        }
+        String numberBraille = hashConverter.get(s);
+        return numberBraille;
+    }
+
 }

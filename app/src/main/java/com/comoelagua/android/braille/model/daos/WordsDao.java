@@ -9,6 +9,7 @@ import com.comoelagua.android.braille.model.daos.interfaces.WordsDaoInterface;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Hashtable;
 
 public class WordsDao implements WordsDaoInterface {
 
@@ -58,5 +59,12 @@ public class WordsDao implements WordsDaoInterface {
 
     public String[] getStringArray() {
         return res.getStringArray(R.array.words);
+    }
+
+    public Hashtable<String, String> getHashConverter() {
+        Hashtable<String, String> hashConverter
+                = new Hashtable<String, String>();
+        hashConverter.put("one", "1");
+        return hashConverter;
     }
 }
