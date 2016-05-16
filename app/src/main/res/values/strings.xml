@@ -52,14 +52,15 @@
         \n2 5
         \n3 6
         \na partir de estos seis puntos se pueden generar 63 combinaciones para representar las letras del abecedario.
-        \nPor ejemplo la l sería
-        \n1
+        \nPor ejemplo la f sería
+        \n1 4
         \n2
-        \n3
+        \n
         \nPor ejemplo la m sería
         \n1 4
         \n
         \n3
+        \nRepasa todo el abecedario pulsando el botón alfabeto o en el menú alfabeto
     </string>
     <string name="helpParagraph">
         \nAprende Braille.
