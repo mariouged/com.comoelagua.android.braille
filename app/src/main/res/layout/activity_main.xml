@@ -5,74 +5,90 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/showAlphabet"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/alphabet"
-        android:contentDescription="@string/alphabetDescription"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:background="#92c755" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/charactersExercises"
-        android:contentDescription="@string/charactersExercisesDescription"
-        android:onClick="openCharactersExercises"
-        android:background="#92c755"
-        android:padding="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/wordExercises"
-        android:contentDescription="@string/wordExercisesDescription"
-        android:onClick="openWordExercises"
-        android:background="#92c755"
-        android:padding="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/numbersExercises"
-        android:contentDescription="@string/numbersExercisesDescription"
-        android:onClick="openNumbersExercises"
-        android:background="#92c755"
-        android:padding="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/phraseExercises"
-        android:contentDescription="@string/phraseExercisesDescription"
-        android:onClick="openPhraseExercises"
-        android:padding="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:background="#92c755" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:text="@string/mainParagraph"
+    <ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
         android:scrollbars="vertical"
-        android:textSize="18dp"
-        android:textColor="#000000"
-        android:textIsSelectable="true"
-        android:padding="10dp"
-        android:paddingTop="20dp" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/showAlphabet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/alphabet"
+                android:contentDescription="@string/alphabetDescription"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#92c755"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/charactersExercises"
+                android:contentDescription="@string/charactersExercisesDescription"
+                android:onClick="openCharactersExercises"
+                android:background="#92c755"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/wordExercises"
+                android:contentDescription="@string/wordExercisesDescription"
+                android:onClick="openWordExercises"
+                android:background="#92c755"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/numbersExercises"
+                android:contentDescription="@string/numbersExercisesDescription"
+                android:onClick="openNumbersExercises"
+                android:background="#92c755"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/phraseExercises"
+                android:contentDescription="@string/phraseExercisesDescription"
+                android:onClick="openPhraseExercises"
+                android:padding="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#92c755" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/mainParagraph"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:textIsSelectable="true"
+                android:padding="10dp"
+                android:paddingTop="20dp"
+                android:focusable="false"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>
