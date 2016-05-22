@@ -18,7 +18,8 @@
     <string name="next">Siguiente</string>
     <string name="nextContinue">Continuar</string>
     <string name="nextDescription">Pulsa siguiente para comprobar y continuar</string>
-    <string name="answerFail">Has fallado en alguna letra, continua</string>
+    <string name="answerSuccess">Bien continúa</string>
+    <string name="answerError">Mal no pasa nada</string>
 
     <string name="title_activity_alphabet">Alfabeto</string>
     <string name="wordExercises">Ejercicios de palabras</string>

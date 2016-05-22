@@ -139,12 +139,14 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         String answer = answerEditText.getText().toString();
         if (wordCompare.checkEquals(currentWord.getWordToCompare(), answer)) {
             ok++;
+            speech(R.string.answerSuccess, null);
             continueAsk();
             return;
         }
 
         fail++;
         hasError = true;
+        speech(R.string.answerError, null);
         answerFail();
     }
 
@@ -168,7 +170,6 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         nextButton.setBackgroundResource(R.color.nextButtonFail);
         //answerEditText.setEnabled(false); // on disabled EditText red char no show, all text color : grey
         nextButton.setText(R.string.nextContinue);
-        speech(R.string.answerFail, null);
 
     }
 
