@@ -18,7 +18,9 @@ package com.comoelagua.android.braille.module.exercises;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.media.AudioManager;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
 import android.text.style.ForegroundColorSpan;
@@ -38,7 +40,9 @@ import com.comoelagua.android.braille.module.exercises.listener.AnswerOnEditorAc
 import com.comoelagua.android.braille.module.exercises.listener.NextAskOnClickListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 public abstract class ExercisesActivity extends AppCompatActivity implements ExercisesInterface {
 
@@ -47,6 +51,8 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
     protected TextView askTextView;
     protected EditText answerEditText;
     protected Button nextButton;
+    protected TextToSpeech textToSpeech;
+    protected HashMap<String, String> hashAlarm;
     protected ArrayList<WordInterface> wordsList;
     protected WordInterface currentWord;
     protected WordCompare wordCompare;
@@ -75,6 +81,8 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
 
         Typeface typeFace = Typeface.createFromAsset(getAssets(), getString(R.string.brailleFont));
         askTextView.setTypeface(typeFace);
+
+        initTextToSpeech();
 
         wordCompare = new WordCompare();
         resultExercise = new ResultExercise();
@@ -160,6 +168,8 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         nextButton.setBackgroundResource(R.color.nextButtonFail);
         //answerEditText.setEnabled(false); // on disabled EditText red char no show, all text color : grey
         nextButton.setText(R.string.nextContinue);
+        speech(R.string.answerFail, null);
+
     }
 
     public void showResult() {
@@ -167,6 +177,28 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         resultExercise.finish(ok, fail, this);
         intent.putExtra(RESULT_EXERCISE, resultExercise);
         startActivity(intent);
+    }
+
+    protected void initTextToSpeech() {
+        textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status != TextToSpeech.ERROR) {
+                    textToSpeech.setLanguage( Locale.getDefault() );
+                }
+            }
+        });
+        hashAlarm = new HashMap();
+        hashAlarm.put(
+            TextToSpeech.Engine.KEY_PARAM_STREAM,
+                String.valueOf(AudioManager.STREAM_ALARM)
+        );
+    }
+
+    protected void speech(int rsid, String msg) {
+        msg = (rsid > 0) ? getResources().getString(rsid) : (null != msg) ? msg : "No has message";
+
+        textToSpeech.speak(msg, TextToSpeech.QUEUE_FLUSH, hashAlarm);
     }
 
 }
