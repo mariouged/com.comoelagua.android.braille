@@ -5,6 +5,8 @@
         android:orderInCategory="90" app:showAsAction="never" />
     <item android:id="@+id/actionAlphabet" android:title="@string/actionAlphabet"
         android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/actionSettings" android:title="@string/actionSettings"
+        android:orderInCategory="110" app:showAsAction="never" />
     <!-- <item android:id="@+id/testFont" android:title="@string/testFont"
         android:orderInCategory="120" app:showAsAction="never" /> -->
 </menu>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/prefCategorySpeechTitle"
+        android:key="prefCategorySpeech">
+
+        <CheckBoxPreference
+            android:key="prefSpeechOnAnswerOk"
+            android:title="@string/prefSpeechOnAnswerOk"
+            android:summary="@string/prefSpeechOnAnswerOkSum"
+            android:defaultValue="false" />
+
+        <CheckBoxPreference
+            android:key="prefSpeechOnAnswerFail"
+            android:title="@string/prefSpeechOnAnswerFail"
+            android:summary="@string/prefSpeechOnAnswerFailSum"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -16,10 +16,12 @@
 package com.comoelagua.android.braille.module.exercises;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Spannable;
@@ -46,6 +48,8 @@ import java.util.Locale;
 
 public abstract class ExercisesActivity extends AppCompatActivity implements ExercisesInterface {
 
+    protected boolean prefSpeechOnAnswerOk;
+    protected boolean prefSpeechOnAnswerFail;
     protected TextView wordLabel;
     protected TextView askNumberTextView;
     protected TextView askTextView;
@@ -69,6 +73,10 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getContentView());
+
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        prefSpeechOnAnswerOk = sharedPref.getBoolean("prefSpeechOnAnswerOk", true);
+        prefSpeechOnAnswerFail = sharedPref.getBoolean("prefSpeechOnAnswerFail", true);
 
         wordLabel = (TextView) findViewById(R.id.wordLabel);
         askNumberTextView = (TextView) findViewById(R.id.askNumber);
@@ -139,14 +147,14 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
         String answer = answerEditText.getText().toString();
         if (wordCompare.checkEquals(currentWord.getWordToCompare(), answer)) {
             ok++;
-            speech(R.string.answerSuccess, null);
+            if (prefSpeechOnAnswerOk) speech(R.string.answerSuccess, null);
             continueAsk();
             return;
         }
 
         fail++;
         hasError = true;
-        speech(R.string.answerError, null);
+        if (prefSpeechOnAnswerFail) speech(R.string.answerError, null);
         answerFail();
     }
 

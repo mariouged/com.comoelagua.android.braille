@@ -59,6 +59,9 @@ public class MainActivity extends AppCompatActivity {
         } else if (item.getItemId() == R.id.actionAlphabet) {
             startActivity(new Intent(this, AlphabetActivity.class));
             return true;
+        } else if (item.getItemId() == R.id.actionSettings) {
+            startActivity(new Intent(this, SettingsActivity.class));
+            return true;
         }/* else if (item.getItemId() == R.id.testFont) {
             startActivity(new Intent(this, CharactersActivity.class));
             return true;

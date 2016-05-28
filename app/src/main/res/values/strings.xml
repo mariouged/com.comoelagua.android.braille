@@ -2,6 +2,7 @@
     <string name="app_name">Aprende Braille</string>
 
     <string name="action_settings">Settings</string>
+    <string name="actionSettings">Ajustes</string>
 
     <string name="alphabet">Alfabeto</string>
     <string name="alphabetDescription">Alfabeto Braille, todo el abecedario</string>
@@ -77,7 +78,7 @@
         \nPero llevan delante el signo 3 4 5 6.
         \n
         \n
-        \nLamentandolo mucho sólo sirve para que aprendan videntes: profesores, amigos, familiares, ...
+        \nLamentandolo mucho sólo sirve para que aprendan personsa que ven con los ojos: profesores, amigos, familiares, ...
         \nLa aplicación es accesible, con descripciones para los textos, botones, ...
         Activa el servicio TalkBack y podrás acceder una descripción de cada elemento.
         \n
@@ -96,7 +97,7 @@
         \nPuedes usarla en cualquier momento
         , no necesita conexión a internet por lo que no te consumirá datos.
         \n
-        \nVersion 1.5
+        \nVersion 1.6
     </string>
     <string name="phraseExample">El perro de san roque no tiene rabo porque Ramón Ramirez se lo ha cortado</string>
     <string name="title_activity_numbers_exercises">Ejercicios de números</string>
@@ -104,4 +105,10 @@
     <string name="numbersExercisesDescription">Ejercicios de números, otro test de primer nivel, consiste en un ejercicio dónde se muestra un número en Braille y hay que introducir el número leído</string>
     <string name="number_label">Número</string>
     <string name="answerNumberDescription">Introduce el número que has leido arriba</string>
+    <string name="prefCategorySpeechTitle">HABLA</string>
+    <string name="prefSpeechOnAnswerOk">Hablar en respuesta correta</string>
+    <string name="prefSpeechOnAnswerOkSum">Reproduce por voz el mensaje: Bien continúa</string>
+    <string name="prefSpeechOnAnswerFail">Hablar en respuesta fallada</string>
+    <string name="prefSpeechOnAnswerFailSum">Reproduce por voz el mensaje: Mal no pasa nada</string>
+    <string name="title_activity_settings">Ajustes</string>
 </resources>
