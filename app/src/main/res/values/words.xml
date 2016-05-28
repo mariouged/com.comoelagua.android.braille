@@ -558,12 +558,24 @@
         <item>llámame</item>
         <item>prestar</item>
         <item>anímate</item>
-        <item>Cálmate</item>
-        <item>Corpulento</item>
-        <item>Delgaducho</item>
-        <item>Escuálido</item>
+        <item>cálmate</item>
+        <item>corpulento</item>
+        <item>delgaducho</item>
+        <item>escuálido</item>
         <item>mojarse</item>
         <item>spaguetti</item>
-        <item>Sírvete</item>
+        <item>sírvete</item>
+        <item>palo</item>
+        <item>polo</item>
+        <item>pelo</item>
+        <item>bola</item>
+        <item>bolo</item>
+        <item>lobo</item>
+        <item>copa</item>
+        <item>bebe</item>
+        <item>bebé</item>
+        <item>dedo</item>
+        <item>dado</item>
+        <item>boca</item>
     </string-array>
 </resources>
