@@ -170,11 +170,13 @@ public abstract class ExercisesActivity extends AppCompatActivity implements Exe
 
     public void answerFail() {
         List<Integer> positionsErrorsList = wordCompare.getPositionsErrorsList();
-        Spannable answerSpannable = (Spannable) answerEditText.getText();
-        for(Integer positionError : positionsErrorsList) {
-            answerSpannable.setSpan( new ForegroundColorSpan(Color.RED), positionError.intValue(), 1 + positionError.intValue(), Spannable.SPAN_COMPOSING);
+        if (positionsErrorsList.size() > 0) {
+            Spannable answerSpannable = (Spannable) answerEditText.getText();
+            for (Integer positionError : positionsErrorsList) {
+                answerSpannable.setSpan(new ForegroundColorSpan(Color.RED), positionError.intValue(), 1 + positionError.intValue(), Spannable.SPAN_COMPOSING);
+            }
+            resultExercise.addAllcharactersErrorsList(wordCompare.getCharactersErrorsList());
         }
-        resultExercise.addAllcharactersErrorsList(wordCompare.getCharactersErrorsList());
         nextButton.setBackgroundResource(R.color.nextButtonFail);
         //answerEditText.setEnabled(false); // on disabled EditText red char no show, all text color : grey
         nextButton.setText(R.string.nextContinue);
