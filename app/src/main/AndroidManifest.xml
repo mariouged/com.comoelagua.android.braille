@@ -33,6 +33,7 @@
         <activity
             android:name=".WordExercisesActivity"
             android:label="@string/title_activity_word_exercises"
+            android:windowSoftInputMode="stateVisible"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -41,6 +42,7 @@
         <activity
             android:name=".PhraseExercisesActivity"
             android:label="@string/title_activity_phrase_exercises"
+            android:windowSoftInputMode="stateVisible"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -49,6 +51,7 @@
         <activity
             android:name=".CharactersExercisesActivity"
             android:label="@string/title_activity_characters_exercises"
+            android:windowSoftInputMode="stateVisible"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -82,6 +85,7 @@
         <activity
             android:name=".NumbersExercisesActivity"
             android:label="@string/title_activity_numbers_exercises"
+            android:windowSoftInputMode="stateVisible"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
