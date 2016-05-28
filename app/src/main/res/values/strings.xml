@@ -19,8 +19,8 @@
     <string name="next">Siguiente</string>
     <string name="nextContinue">Continuar</string>
     <string name="nextDescription">Pulsa siguiente para comprobar y continuar</string>
-    <string name="answerSuccess">Bien continúa</string>
-    <string name="answerError">Mal no pasa nada</string>
+    <string name="answerSuccess">Bien, siguiente</string>
+    <string name="answerError">Mal no pasa nada, continúa</string>
 
     <string name="title_activity_alphabet">Alfabeto</string>
     <string name="wordExercises">Ejercicios de palabras</string>
@@ -54,15 +54,18 @@
         \n1 4
         \n2 5
         \n3 6
-        \na partir de estos seis puntos se pueden generar 63 combinaciones para representar las letras del abecedario.
+        \n
+        \nA partir de estos seis puntos se pueden generar 63 combinaciones para representar las letras del abecedario.
         \nPor ejemplo la f sería
         \n1 4
         \n2
+        \n
         \n
         \nPor ejemplo la m sería
         \n1 4
         \n
         \n3
+        \n
         \nRepasa todo el abecedario pulsando el botón alfabeto o en el menú alfabeto
     </string>
     <string name="helpParagraph">
@@ -76,18 +79,24 @@
         \n
         \nTambién hay ejercicios de números, los números del 1 al 0, coinciden con las letras de la a hasta la j.
         \nPero llevan delante el signo 3 4 5 6.
-        \n
+        \n   4
+        \n   5
+        \n3 6
         \n
         \nLamentandolo mucho sólo sirve para que aprendan personsa que ven con los ojos: profesores, amigos, familiares, ...
         \nLa aplicación es accesible, con descripciones para los textos, botones, ...
-        Activa el servicio TalkBack y podrás acceder una descripción de cada elemento.
+        Activa el servicio TalkBack y podrás acceder a una descripción de cada elemento.
+        \n
+        \nTienes disponibles mensajes de voz cuando aciertas o fallas
+         en una pregunta, por defecto algunos están desactivados, les puedes configurarlos
+         en el menú Ajustes.
         \n
         \nPor el momento:
         \n- No se utilizan mayúsculas.
         \n- Solo en Español
         \n
         \nLa aplicación, contiene el alfabeto braille en Español.
-        Permite realizar ejercicios de letras, palabras y frases.
+        Permite realizar ejercicios de letras, números, palabras y frases.
         Son test de preguntas, en las que se debe leer en braille e introducir la respuesta.
         Al finalizar el ejercicio se mostrarán las correctas, falladas, tiempo empleado
         , mejor tiempo y las letras que hay que repasar.
@@ -107,8 +116,8 @@
     <string name="answerNumberDescription">Introduce el número que has leido arriba</string>
     <string name="prefCategorySpeechTitle">HABLA</string>
     <string name="prefSpeechOnAnswerOk">Hablar en respuesta correta</string>
-    <string name="prefSpeechOnAnswerOkSum">Reproduce por voz el mensaje: Bien continúa</string>
+    <string name="prefSpeechOnAnswerOkSum">Reproduce por voz el mensaje: Bien</string>
     <string name="prefSpeechOnAnswerFail">Hablar en respuesta fallada</string>
-    <string name="prefSpeechOnAnswerFailSum">Reproduce por voz el mensaje: Mal no pasa nada</string>
+    <string name="prefSpeechOnAnswerFailSum">Reproduce por voz el mensaje: Mal</string>
     <string name="title_activity_settings">Ajustes</string>
 </resources>

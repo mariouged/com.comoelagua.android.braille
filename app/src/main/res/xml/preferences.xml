@@ -14,7 +14,7 @@
             android:key="prefSpeechOnAnswerFail"
             android:title="@string/prefSpeechOnAnswerFail"
             android:summary="@string/prefSpeechOnAnswerFailSum"
-            android:defaultValue="false" />
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 </PreferenceScreen>
