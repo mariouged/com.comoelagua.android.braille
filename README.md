@@ -1,6 +1,23 @@
+```
 Aprende Braille.
 
 La mejor manera de aprender es practicando.
+
+El sistema Braille es un alfabeto, apartir del signo generador
+1 4
+2 5
+3 6
+
+A partir de estos seis puntos se pueden generar 63 combinaciones para representar las letras del abecedario.
+Por ejemplo la f sería
+1 4
+2
+
+
+Por ejemplo la m sería
+1 4
+
+3
 
 Primero repasa el alfabeto, haz ejercicios de letras para practicar y aprenderlas todas.
 Con los ejercicios de palabras terminarás de aprender el alfabeto.
@@ -37,3 +54,4 @@ Puedes usarla en cualquier momento
 , no necesita conexión a internet por lo que no te consumirá datos.
 
 Version 1.6
+```
